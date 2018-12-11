@@ -1,1 +1,1 @@
-web: gunicorn ncr_silver.wsgi --log-file -
+web: gunicorn ncr_api.wsgi --log-file -
