@@ -13,6 +13,10 @@ django-extensions = "*"
 djangorestframework = "*"
 gunicorn = "*"
 django-heroku = "*"
+rest-auth = "*"
+django-rest-auth = {extras = ["with_social"],version = "*"}
+corsheaders = "*"
+django-cors-headers = "*"
 
 [requires]
 python_version = "3.7"
