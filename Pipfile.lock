@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "522bb80d7c74cb7ab638441ac9301971d02e7d221dc8657b6740116e436ebffa"
+            "sha256": "f248bc2a2709a141ef957cd6de5b06310cce45145302a092a91800bc7fffddc1"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -141,6 +141,14 @@
                 "sha256:8e0f8568c118d3077b46be7d654cc8167fa916092e28320cde048e54bfc9f1e6"
             ],
             "version": "==2018.7"
+        },
+        "router": {
+            "hashes": [
+                "sha256:4ca308adec8b57bb4021a4ffd0d517e5ddd495c19f0a3e96b95b08a3fe87b88e",
+                "sha256:f3792acda2d801a2b218e875b5dc0a72744cce32ed60ce90403074f97a5bb3af"
+            ],
+            "index": "pypi",
+            "version": "==0.1"
         },
         "six": {
             "hashes": [
