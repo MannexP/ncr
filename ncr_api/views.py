@@ -1,3 +1,4 @@
+import logging
 import os
 
 from django.views.generic import View
