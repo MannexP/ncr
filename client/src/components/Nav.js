@@ -8,7 +8,7 @@ class Nav extends Component {
           <div class="Logo">Logo</div>
           <div class="Right">
             <div class="Nav">
-              <ul>
+              <ul class="flexed">
                 <li><a href='#'>About</a></li>
                 <li><a href='#'>Products</a></li>
                 <li><a href='#'>Build A Solution</a></li>
@@ -16,13 +16,13 @@ class Nav extends Component {
               </ul>
             </div>
             <div class="icons">
-            <ul>
+            <ul class="flexed">
                 <li><a href='#'>Search</a></li>
                 <li><a href='#'>Profile</a></li>
                 <li><a href='#'>Cart</a></li>
               </ul>
             </div>
-            <div class="Silver-Logo">
+            <div class="Silver-Logo centered">
             Silver logo
             </div>
           </div>
