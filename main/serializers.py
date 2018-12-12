@@ -1,7 +1,6 @@
 from rest_framework import serializers
 
-from .models import Profile, Shipping, OrderHistory, Billing, ProductType, Product, ShoppingCart, OrderItem,
-    TrackPackage
+from .models import Profile, Shipping, OrderHistory, Billing, ProductType, Product, ShoppingCart, OrderItem, TrackPackage
 
 
 class ProfileSerializer(serializers.ModelSerializer):

@@ -1,13 +1,11 @@
-import router as router
-from django.conf.urls import url
-from django.contrib import admin
-from django.urls import path
+
 from django.urls import path, include
+from . import views
 from rest_framework import routers
 
 from . import views
 
-router = router.DefaultRouter()
+router = routers.DefaultRouter()
 router.register('profile', views.ProfileView)
 router.register('shipping', views.ShippingView)
 router.register('order_history', views.OrderHistoryView)
