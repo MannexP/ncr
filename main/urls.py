@@ -9,13 +9,13 @@ from . import views
 router = router.DefaultRouter()
 router.register('profile', views.ProfileView)
 router.register('shipping', views.ShippingView)
-router.register('orderhistory', views.OrderHistoryView)
-router.register('producttype', views.ProductTypeView)
+router.register('order_history', views.OrderHistoryView)
+router.register('product_type', views.ProductTypeView)
 router.register('product', views.ProductView)
-router.register('shoppingcart', views.ShoppingCartView)
+router.register('shopping_cart', views.ShoppingCartView)
 router.register('billing', views.BillingView)
-router.register('orderitem', views.OrderItemView)
-router.register('trackpackage', views.TrackPackageView)
+router.register('order_item', views.OrderItemView)
+router.register('track_package', views.TrackPackageView)
 
 
 urlpatterns = [
