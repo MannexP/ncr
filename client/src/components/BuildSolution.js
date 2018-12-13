@@ -3,14 +3,16 @@ import Customer from './Solution-Components/Customer';
 import BusinessRun from './Solution-Components/BusinessRun';
 import Confirmation from './Solution-Components/Confirmation';
 import Success from './Solution-Components/Success';
+import BusinessType from './Solution-Components/BusinessType';
+import Features from './Solution-Components/Features';
 
 class BuildSolution extends Component {
   state = {
     step: 1,
     customerAnswer: '',
-    businessRun: '',
-    age: '',
-    city: '',
+    businessRunAnswer: '',
+    businessTypeAnswer: '',
+    featureAnswer: '',
     country: ''
 }
 
@@ -19,6 +21,7 @@ nextStep = () => {
     this.setState({
         step : step + 1
     })
+    console.log(step)
 }
 
 prevStep = () => {
@@ -34,8 +37,8 @@ handleChange = event => {
 
 render(){
     const {step} = this.state;
-    const { customerAnswer, businessRun, age, city, country } = this.state;
-    const values = { customerAnswer, businessRun, age, city, country };
+    const { customerAnswer, businessRunAnswer, businessTypeAnswer, featureAnswer, country } = this.state;
+    const values = { customerAnswer, businessRunAnswer, businessTypeAnswer, featureAnswer, country };
     switch(step) {
     case 1:
         return <Customer 
@@ -51,12 +54,26 @@ render(){
                 values={values}
                 />
     case 3:
+        return <BusinessType 
+                nextStep={this.nextStep}
+                prevStep={this.prevStep}
+                handleChange = {this.handleChange}
+                values={values}
+                />
+    case 4:
+        return <Features 
+                nextStep={this.nextStep}
+                prevStep={this.prevStep}
+                handleChange = {this.handleChange}
+                values={values}
+                />
+    case 5:
         return <Confirmation
                 nextStep={this.nextStep}
                 prevStep={this.prevStep}
                 values={values}
                 />
-    case 4:
+    case 6:
         return <Success />
     }
   }

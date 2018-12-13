@@ -9,7 +9,7 @@ const SolutionStyles = styled.div`
 
 `
 
-class Customer extends Component {
+class BusinessType extends Component {
   next = (e) => {
     e.preventDefault()
     this.props.nextStep()
@@ -18,17 +18,22 @@ class Customer extends Component {
     this.props.handleChange(event)
   }
   render() {
+    console.log("hit")
     return (
       <Form color='green' >
         <h1 className="ui centered"></h1>
         <SolutionStyles>
         <div className="grouped fields">
-          <label>Are you an existing customer?</label>
+          <label>What type of business are you?</label>
           <div className="field">
-            <input onClick={this.onChange} type="radio" name="customerAnswer" value="Yes" />
-            <label> Yes</label>
-            <input onClick={this.onChange} type="radio" name="customerAnswer" value="No" />
-            <label> No</label>
+          <input onClick={this.onChange} type="radio" name="businessTypeAnswer" value="Full Service Resturant" />
+            <label>Full Service Resturant</label>
+            <input onClick={this.onChange} type="radio" name="businessTypeAnswer" value="Retail" />
+            <label>Retail</label>
+            <input onClick={this.onChange} type="radio" name="businessTypeAnswer" value="Service" />
+            <label> Service</label>
+            <input onClick={this.onChange} type="radio" name="businessTypeAnswer" value="Cafe or Food Truck" />
+            <label>Cafe or Food Truck</label>
           </div>
         </div>
           <div>
@@ -40,4 +45,4 @@ class Customer extends Component {
   }
 }
 
-export default Customer;
+export default BusinessType;

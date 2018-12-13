@@ -9,10 +9,14 @@ const SolutionStyles = styled.div`
 
 `
 
-class Customer extends Component {
+class Features extends Component {
   next = (e) => {
     e.preventDefault()
     this.props.nextStep()
+  }
+  back  = (e) => {
+    e.preventDefault();
+    this.props.prevStep();
   }
   onChange = (event) => {
     this.props.handleChange(event)
@@ -22,12 +26,18 @@ class Customer extends Component {
       <Form color='green' >
         <h1 className="ui centered"></h1>
         <SolutionStyles>
+        <div>
+          <Icon onClick={this.back} aria-hidden="true" className="chevron left big"></Icon>
+        </div>
         <div className="grouped fields">
-          <label>Are you an existing customer?</label>
+          <label>Would you like any of these features</label>
+          <p>Table layout  •  Transfer Tabs  •  Happy Hour Pricing  •  Forced Modifiers  •  Takeout or Delivery
+            <br />
+            Advanced Check Splitting  •  House Accounts  •  Multi-Station Kitchen Printer Routing  •  Barista or Kitchen Display</p>
           <div className="field">
-            <input onClick={this.onChange} type="radio" name="customerAnswer" value="Yes" />
+            <input onClick={this.onChange} type="radio" name="featureAnswer" value="Yes" />
             <label> Yes</label>
-            <input onClick={this.onChange} type="radio" name="customerAnswer" value="No" />
+            <input onClick={this.onChange} type="radio" name="featureAnswer" value="No" />
             <label> No</label>
           </div>
         </div>
@@ -40,4 +50,4 @@ class Customer extends Component {
   }
 }
 
-export default Customer;
+export default Features;

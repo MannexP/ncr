@@ -35,11 +35,11 @@ render(){
           <div className="grouped fields">
             <label>What kind of business do you run?</label>
             <div className="field">
-              <input onClick={ (event) => this.onChange(event)} type="radio" name="businessRun" value="Single Location" />
+              <input onClick={this.onChange} type="radio" name="businessRunAnswer" value="Single Location" />
               <label> Single Location</label>
-              <input onClick={ (event) => this.onChange(event)} type="radio" name="businessRun" value="Multi Locaiton" />
+              <input onClick={this.onChange} type="radio" name="businessRunAnswer" value="Multi Locaiton" />
               <label> Multi Locaiton</label>
-              <input onClick={ (event) => this.onChange(event)} type="radio" name="businessRun" value="Franchise" />
+              <input onClick={this.onChange} type="radio" name="businessRunAnswer" value="Franchise" />
               <label> Franchise</label>
             </div>
           </div>
