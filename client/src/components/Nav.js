@@ -26,7 +26,7 @@ class Nav extends Component {
             <ul className="flexed">
               {/* <li><Link to='/'><img src={search} alt="search" height="50px"/></Link></li> */}
               <li><Icon className="search huge"/></li>
-                <li><Link to='/'><img src={profile} alt="profile" height="50px"/></Link></li>
+                <li><Link to='/create-profile'><img src={profile} alt="profile" height="50px"/></Link></li>
                 <li><Link to='/'><img src={cart} alt="cart" height="50px"/></Link></li>
               </ul>
             </div>
