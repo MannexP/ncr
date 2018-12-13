@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 import {BrowserRouter as Router, Switch, Link, Route} from 'react-router-dom'
 import Nav from './Nav';
 import Footer from './Footer';
+import BuildSolution from './BuildSolution';
 class Home extends Component {
   render() {
     return (
           <Router>
             <div>
               <Nav />
-                  Home Component
                 <Switch>
-                  R
+                  <Route exact path='/build-a-solution' component={BuildSolution} />
                 </Switch>
               <Footer />
             </div>
