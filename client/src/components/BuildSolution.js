@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Customer from './Customer';
-import BusinessType from './BusinessType';
-import Confirmation from './Confirmation';
-import Success from './Success';
+import Customer from './Solution-Components/Customer';
+import BusinessType from './Solution-Components/BusinessType';
+import Confirmation from './Solution-Components/Confirmation';
+import Success from './Solution-Components/Success';
 
 class BuildSolution extends Component {
   state = {
