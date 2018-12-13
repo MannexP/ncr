@@ -47,7 +47,8 @@ class OutlinedTextFields extends React.Component {
 
     return (
       <form className={classes.container} noValidate autoComplete="off">
-      
+        <div>
+      <div>
       <TextField required
           id="outlined-with-placeholder"
           label="First Name"
@@ -56,8 +57,9 @@ class OutlinedTextFields extends React.Component {
           margin="normal"
           variant="outlined"
         />
-          
-            
+         </div> 
+
+        <div>
       <TextField required
           id="outlined-with-placeholder"
           label="Last Name"
@@ -66,7 +68,9 @@ class OutlinedTextFields extends React.Component {
           margin="normal"
           variant="outlined"
         />
-    
+    </div>
+
+        <div>
         <TextField required
           id="outlined-email-input"
           label="Email"
@@ -77,8 +81,9 @@ class OutlinedTextFields extends React.Component {
           margin="normal"
           variant="outlined"
         />
-      
+      </div>
      
+     <div>
         <TextField
           id="outlined-number"
           label="Number"
@@ -93,13 +98,13 @@ class OutlinedTextFields extends React.Component {
                 variant="outlined"
              
         />
-       
+       </div>
  
         
         
         
      
-       
+       </div>
       </form>
     );
   }

@@ -4,6 +4,7 @@ import Nav from './Nav';
 // import Footer from './Footer';
 import QuickPay from './QuickPay';
 import ContactInfoForm from './ContactInfoForm';
+import NextButton from './NextButton';
 
 class Home extends Component {
   render() {
@@ -13,6 +14,7 @@ class Home extends Component {
           <Nav />
           <QuickPay />
           <ContactInfoForm />
+          <NextButton />
                   
                 {/* <Switch>
                   R
