@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Switch, Link, Route} from 'react-router-dom'
 import Nav from './Nav';
-import Footer from './Footer';
-import QuickPay from './QuickPay';
+// import Footer from './Footer';
+import QuickPay from './QuickPay'
 import BuildSolution from './BuildSolution';
 class Home extends Component {
   render() {
