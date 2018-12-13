@@ -1,0 +1,36 @@
+ul li {
+  list-style: none;
+   
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "Logo Right Right Right Right Right Right Right Right Right Right";
+  background-image: linear-gradient(to right, #54B948 , #0099BF);
+}
+.flexed{
+  display: flex;
+  justify-content: space-around;
+}
+.centered{
+  display: flex;
+  justify-content: center;
+}
+
+.Logo { grid-area: Logo; }
+
+.Right {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "Silver-Logo Silver-Logo icons" "Nav Nav Nav";
+  grid-area: Right;
+}
+
+.Nav { grid-area: Nav; }
+
+.icons { grid-area: icons; }
+
+.Silver-Logo { grid-area: Silver-Logo; }
