@@ -31,7 +31,6 @@ class Nav extends Component {
               </ul>
             </div>
             <div className="Silver-Logo centered">
-            <Link to='/'><img src={silverlogo} alt="silverlogo" height="110px" width="300px"/></Link>
             </div>
           </div>
         </div>

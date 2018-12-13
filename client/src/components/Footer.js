@@ -33,7 +33,7 @@ input{
 class Footer extends Component {
   render() {
     return (
-      <div className="grid-container">
+      <div className="grid-container2">
         <FooterBar>
           <footer>
             <div className="ncr-silver">
