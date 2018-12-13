@@ -1,25 +1,20 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Switch, Link, Route} from 'react-router-dom'
 import Nav from './Nav';
-// import Footer from './Footer';
-import QuickPay from './QuickPay';
-import ContactInfoForm from './ContactInfoForm';
-import NextButton from './NextButton';
-
+import Footer from './Footer';
+import QuickPay from './QuickPay'
+import BuildSolution from './BuildSolution';
 class Home extends Component {
   render() {
     return (
           <Router>
             <div>
-          <Nav />
-          <QuickPay />
-          <ContactInfoForm />
-          <NextButton />
-                  
-                {/* <Switch>
-                  R
-                </Switch> */}
-              {/* <Footer /> */}
+              <Nav />
+                <Switch>
+                  <Route exact path='/build-a-solution' component={BuildSolution} />
+                  <Route exact path='/checkout' component={QuickPay} />
+                </Switch>
+              <Footer />
             </div>
           </Router>
     );
