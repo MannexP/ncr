@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import QuickPay from './QuickPay';
-import ContactInfoForm from './ContactInfoForm'
+import QuickPay from './Checkout-Components/QuickPay';
+import ContactInfoForm from './Checkout-Components/ContactInfoForm';
+import NextButton from './Checkout-Components/NextButton';
+import ShippingForm from './Checkout-Components/ShippingForm';
 
 class Checkout extends Component {
   render() {
@@ -8,6 +10,9 @@ class Checkout extends Component {
       <div>
         <QuickPay />
         <ContactInfoForm />
+        <NextButton />
+        <ShippingForm />
+        <NextButton />
       </div>
     );
   }
