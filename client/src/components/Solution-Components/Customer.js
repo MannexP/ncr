@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Button } from 'semantic-ui-react';
+import { Form, Icon } from 'semantic-ui-react';
 import styled from 'styled-components'
 
 const SolutionStyles = styled.div`
@@ -14,25 +14,28 @@ class Customer extends Component {
     e.preventDefault()
     this.props.nextStep()
   }
+  onChange = (event) => {
+    this.props.handleChange(event)
+  }
   render() {
-    const { values } = this.props
     return (
       <Form color='green' >
+        <h1 className="ui centered"></h1>
         <SolutionStyles>
-          <div class="grouped fields">
-              <label>HTML radios</label>
-              <div class="field">
-              <label>
-              <input type="radio" name="htmlRadios"/> This one</label>
-            </div>
-            <div class="field">
-              <label>
-              <input type="radio" name="htmlRadios"/> That one</label>
-            </div>
+        <div className="grouped fields">
+          <label>Are you an existing customer?</label>
+          <div className="field">
+            <input onClick={ (event) => this.onChange(event)} type="radio" name="customerAnswer" value="Yes" />
+            <label> Yes</label>
+            <input onClick={ (event) => this.onChange(event)} type="radio" name="customerAnswer" value="No" />
+            <label> No</label>
           </div>
-          <div><i aria-hidden="true" className="angle right"></i></div>
+        </div>
+          <div>
+            <Icon onClick={this.next} aria-hidden="true" className="chevron right big"></Icon>
+          </div>
         </SolutionStyles>
-    </Form>
+      </Form>
     );
   }
 }

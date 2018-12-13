@@ -13,26 +13,19 @@ class Confirmation extends Component{
     }
 
     render(){
-        const {values: { firstName, lastName, email, age, city, country }} = this.props;
-
+        const {values: { customerAnswer, businessRun, age, city, country }} = this.props;
+        console.log(customerAnswer)
         return(
             <div>
                 <h1 className="ui centered">Confirm your Details</h1>
                 <p>Click Confirm if the following details have been correctly entered</p>
                 <List>
                     <List.Item>
-                        <List.Icon name='users' />
-                        <List.Content>First Name: {firstName}</List.Content>
+                        <List/>
+                        <List.Content>Existing Customer? {customerAnswer}</List.Content>
                     </List.Item>
                     <List.Item>
-                        <List.Icon name='users' />
-                        <List.Content>Last Name: {lastName}</List.Content>
-                    </List.Item>
-                    <List.Item>
-                        <List.Icon name='mail' />
-                        <List.Content>
-                            <a href='mailto:jack@semantic-ui.com'>{email}</a>
-                        </List.Content>
+                        <List.Content>What kind of business do you run? {businessRun}</List.Content>
                     </List.Item>
                     <List.Item>
                         <List.Icon name='calendar' />

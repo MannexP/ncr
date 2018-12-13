@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import Customer from './Solution-Components/Customer';
-import BusinessType from './Solution-Components/BusinessType';
+import BusinessRun from './Solution-Components/BusinessRun';
 import Confirmation from './Solution-Components/Confirmation';
 import Success from './Solution-Components/Success';
 
 class BuildSolution extends Component {
   state = {
     step: 1,
-    firstName: '',
-    lastName: '',
-    email: '',
+    customerAnswer: '',
+    businessRun: '',
     age: '',
     city: '',
     country: ''
@@ -29,14 +28,14 @@ prevStep = () => {
     })
 }
 
-handleChange = input => event => {
-    this.setState({ [input] : event.target.value })
+handleChange = event => {
+    this.setState({ [event.target.name] : event.target.value })
 }
 
 render(){
     const {step} = this.state;
-    const { firstName, lastName, email, age, city, country } = this.state;
-    const values = { firstName, lastName, email, age, city, country };
+    const { customerAnswer, businessRun, age, city, country } = this.state;
+    const values = { customerAnswer, businessRun, age, city, country };
     switch(step) {
     case 1:
         return <Customer 
@@ -45,7 +44,7 @@ render(){
                 values={values}
                 />
     case 2:
-        return <BusinessType 
+        return <BusinessRun 
                 nextStep={this.nextStep}
                 prevStep={this.prevStep}
                 handleChange = {this.handleChange}
