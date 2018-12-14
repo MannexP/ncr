@@ -4,6 +4,7 @@ import Nav from './Nav';
 import Footer from './Footer';
 import BuildSolution from './BuildSolution';
 import Checkout from './Checkout';
+import Product from './Product';
 class Home extends Component {
   render() {
     return (
@@ -13,6 +14,7 @@ class Home extends Component {
                 <Switch>
                   <Route exact path='/build-a-solution' component={BuildSolution} />
                   <Route exact path='/checkout' component={Checkout} />
+                  <Route exact path='/products' component={Product} />
                 </Switch>
               <Footer />
             </div>

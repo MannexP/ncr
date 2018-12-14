@@ -10,6 +10,8 @@ class Profile(models.Model):
     last_name = models.CharField(max_length=200)
     phone = models.IntegerField(default=0)
 
+    def __str__(self):
+        return self.name
 
 class Shipping(models.Model):
     company_name = models.CharField(max_length=200)
@@ -28,6 +30,8 @@ class OrderHistory(models.Model):
 class ProductType(models.Model):
     name = models.CharField(max_length=200)
 
+    def __str__(self):
+        return self.name
 
 class Product(models.Model):
     name = models.CharField(max_length=200)
@@ -36,6 +40,8 @@ class Product(models.Model):
     description = models.TextField()
     product_type_id = models.ForeignKey(ProductType, on_delete=models.CASCADE, related_name='products')
 
+    def __str__(self):
+        return self.name
 
 class ShoppingCart(models.Model):
     product_id = models.CharField(max_length=200)
