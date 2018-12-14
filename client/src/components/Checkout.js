@@ -103,6 +103,7 @@ class VerticalLinearStepper extends React.Component {
     return (
       
       <div className={classes.root}>
+        <QuickPay />
         <Stepper activeStep={activeStep} orientation="vertical">
           {steps.map((label, index) => {
             return (
