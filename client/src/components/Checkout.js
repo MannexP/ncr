@@ -34,6 +34,7 @@ import QuickPay from './Checkout-Components/QuickPay';
 import ContactInfoForm from './Checkout-Components/ContactInfoForm';
 import NextButton from './Checkout-Components/NextButton';
 import ShippingForm from './Checkout-Components/ShippingForm';
+import BillingForm from './Checkout-Components/BillingForm';
 import green from '@material-ui/core/colors/green';
 
 const styles = theme => ({
@@ -63,10 +64,7 @@ function getStepContent(step) {
     case 1:
       return <ShippingForm />;
     case 2:
-      return `Try out different ad text to see what brings in the most customers,
-              and learn how to enhance your ads using features like ad extensions.
-              If you run into any problems with your ads, find out how to tell if
-              they're running and how to resolve approval issues.`;
+      return <BillingForm />;
     default:
       return 'Unknown step';
   }

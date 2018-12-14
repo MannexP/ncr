@@ -12,7 +12,7 @@ class Home extends Component {
               <Nav />
                 <Switch>
                   <Route exact path='/build-a-solution' component={BuildSolution} />
-                  <Route exact path='/checkout' component={Checkout} />
+            <Route exact path='/checkout' component={Checkout} />
                 </Switch>
               <Footer />
             </div>
