@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
-import MenuItem from '@material-ui/core/MenuItem';
 import TextField from '@material-ui/core/TextField';
+import styled from 'styled-components';
+// import logo from 'assets/images/checkIcon.png'
+
+
 
 const styles = theme => ({
     container: {
@@ -18,18 +20,39 @@ const styles = theme => ({
         marginTop: 16,
     },
     menu: {
-        width: 200,
+        width: 800,
     },
 });
 
 
 
+const FormStyles = styled.div`
+display: flex;
+justify-content: center
+max-width: 300px;
+margin: 10px;
+padding: 10px;
+
+border-radius: 8px;
+margin-left: 550px;
+margin-top: 50px;
+margin-bottom: 50px;
+
+.details {
+    h4{
+        font-weight: lighter;
+    }
+}
+
+`
+
+
 class OutlinedTextFields extends React.Component {
     state = {
-        name: 'Cat in the Hat',
+        name: '',
         age: '',
-        multiline: 'Controlled',
-        currency: 'EUR',
+        multiline: '',
+        currency: '',
     };
 
     handleChange = name => event => {
@@ -42,43 +65,47 @@ class OutlinedTextFields extends React.Component {
         const { classes } = this.props;
         return (
             <div>
-                <form className={classes.container} noValidate autoComplete="off">
-                    <TextField
-                        id="outlined-name"
-                        label="Name"
-                        className={classes.textField}
-                        value={this.state.name}
-                        onChange={this.handleChange('name')}
-                        margin="normal"
-                        variant="outlined"
-                    />
-                    <TextField
-                        id="outlined-uncontrolled"
-                        label="Uncontrolled"
-                        defaultValue="foo"
-                        className={classes.textField}
-                        margin="normal"
-                        variant="outlined"
-                    />
-                    <TextField
-                        required
-                        id="outlined-required"
-                        label="Required"
-                        defaultValue="Hello World"
-                        className={classes.textField}
-                        margin="normal"
-                        variant="outlined"
-                    />
-                    <TextField
-                        required
-                        id="outlined-required"
-                        label="Required"
-                        defaultValue="Hello World"
-                        className={classes.textField}
-                        margin="normal"
-                        variant="outlined"
-                    />
-                </form>
+                <FormStyles>
+                    <form className={classes.container} noValidate autoComplete="off">
+                        <div className="details">
+                            <h1>Create Profile</h1>
+                            <h4>Save your info for faster check-outs</h4>
+                            <h4>Easily track your orders</h4>
+                            <h4>Product suggestions tailored to you</h4>
+                        </div>
+                      
+                        <TextField           
+                            className={classes.textField}
+                            label="Img"
+                            variant="outlined"
+                            margin="normal"
+                            id="outlined-name"
+                        />                                         
+                        <TextField
+                            id="outlined-uncontrolled"
+                            label="First Name"
+                            className={classes.textField}
+                            margin="normal"
+                            variant="outlined"
+                        />
+                        <TextField
+                            required
+                            id="outlined-required"
+                            label="Last Name"
+                            className={classes.textField}
+                            margin="normal"
+                            variant="outlined"
+                        />
+                        <TextField
+                            required
+                            id="outlined-required"
+                            label="Phone Number"
+                            className={classes.textField}
+                            margin="normal"
+                            variant="outlined"
+                        />
+                    </form>
+                </FormStyles>
             </div>
         );
     }
@@ -93,29 +120,10 @@ export default withStyles(styles)(OutlinedTextFields);
 
 
 
-
-
-
-
-
-
-
-
 // import React, { Component } from 'react';
 // import styled from 'styled-components'
 
-// const FormStyles = styled.div`
-// display: flex;
-// justify-content: center
-// max-width: 300px;
-// margin: 10px;
-// padding: 10px;
-// background: #f4f7f8;
-// border-radius: 8px;
-// margin-left: 550px;
-// margin-top: 50px;
-// // border-style: groove;
-// `
+
 
 // const ButtonStyles = styled.div`
 //   button {
