@@ -26,6 +26,7 @@ const styles = theme => ({
 
 
 
+
 const FormStyles = styled.div`
 display: flex;
 justify-content: center
@@ -43,7 +44,20 @@ margin-bottom: 50px;
         font-weight: lighter;
     }
 }
-
+`
+const ButtonStyles = styled.div`
+  button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 9px;
+    font-weight: bold;
+}
 `
 
 
@@ -73,14 +87,14 @@ class OutlinedTextFields extends React.Component {
                             <h4>Easily track your orders</h4>
                             <h4>Product suggestions tailored to you</h4>
                         </div>
-                      
-                        <TextField           
+
+                        <TextField
                             className={classes.textField}
                             label="Img"
                             variant="outlined"
                             margin="normal"
                             id="outlined-name"
-                        />                                         
+                        />
                         <TextField
                             id="outlined-uncontrolled"
                             label="First Name"
@@ -104,6 +118,9 @@ class OutlinedTextFields extends React.Component {
                             margin="normal"
                             variant="outlined"
                         />
+                        <ButtonStyles>
+                            <button type="submit">Create Profile</button>
+                        </ButtonStyles>
                     </form>
                 </FormStyles>
             </div>
