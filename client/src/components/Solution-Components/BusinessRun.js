@@ -27,7 +27,6 @@ class BusinessType extends Component {
 render(){
     return(
       <Form color='green' >
-        <h1 className="ui centered"></h1>
         <SolutionStyles>
           <div>
             <Icon onClick={this.back} aria-hidden="true" className="chevron left big"></Icon>
@@ -35,11 +34,11 @@ render(){
           <div className="grouped fields">
             <label>What kind of business do you run?</label>
             <div className="field">
-              <input onClick={ (event) => this.onChange(event)} type="radio" name="businessRun" value="Single Location" />
+              <input onClick={this.onChange} type="radio" name="businessRunAnswer" value="Single Location" />
               <label> Single Location</label>
-              <input onClick={ (event) => this.onChange(event)} type="radio" name="businessRun" value="Multi Locaiton" />
+              <input onClick={this.onChange} type="radio" name="businessRunAnswer" value="Multi Locaiton" />
               <label> Multi Locaiton</label>
-              <input onClick={ (event) => this.onChange(event)} type="radio" name="businessRun" value="Franchise" />
+              <input onClick={this.onChange} type="radio" name="businessRunAnswer" value="Franchise" />
               <label> Franchise</label>
             </div>
           </div>
