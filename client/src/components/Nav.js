@@ -12,7 +12,7 @@ class Nav extends Component {
     return (
         <div className="grid-container">
         <div className="Logo">
-        <Link to='/'><img src={ncrlogo} alt="ncrlogo" height="110px" width="100px"/></Link>
+        <Link to='/'><img src={ncrlogo} alt="ncrlogo" height="110px" width="100px" className="ncrImage"/></Link>
         </div>
           <div className="Right">
             <div className="Nav">
@@ -30,7 +30,8 @@ class Nav extends Component {
                 <li><Link to='/'><img src={cart} alt="cart" height="50px"/></Link></li>
               </ul>
             </div>
-            <div className="Silver-Logo centered">
+          <div className="Silver-Logo centered">
+            <h2><Link to='/' className="titles silver" style={{ textDecoration: 'none', color: '#FFFFFF'}}>SILVER</Link></h2>
             </div>
           </div>
         </div>

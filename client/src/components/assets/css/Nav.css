@@ -4,7 +4,7 @@ ul li {
 }
 
 .grid-container {
-  height: 188px;
+  height: 130px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
@@ -35,3 +35,4 @@ ul li {
 .icons { grid-area: icons; }
 
 .Silver-Logo { grid-area: Silver-Logo; }
+
