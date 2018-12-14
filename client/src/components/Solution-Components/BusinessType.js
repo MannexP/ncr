@@ -22,7 +22,6 @@ class BusinessType extends Component {
     this.props.handleChange(event)
   }
   render() {
-    console.log("hit")
     return (
       <Form color='green' >
         <SolutionStyles>
