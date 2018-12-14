@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import apple from '../images/applypay.png';
-import google from '../images/googlepay.png';
-import paypal from '../images/paypalpay.png';
+import apple from '../../images/applypay.png';
+import google from '../../images/googlepay.png';
+import paypal from '../../images/paypalpay.png';
 
 class QuickPay extends Component {
     render() {
