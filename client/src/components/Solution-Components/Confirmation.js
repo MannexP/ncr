@@ -13,7 +13,7 @@ class Confirmation extends Component{
     }
 
     render(){
-        const {values: { customerAnswer, businessRunAnswer, businessTypeAnswer, featureAnswer, country }} = this.props;
+        const {values: { customerAnswer, businessRunAnswer, businessTypeAnswer, featureAnswer, multiFeatureAnswer }} = this.props;
         console.log(customerAnswer)
         return(
             <div>
@@ -32,6 +32,9 @@ class Confirmation extends Component{
                     </List.Item>
                     <List.Item>
                         <List.Content>Would you like any of these features? {featureAnswer}</List.Content>
+                    </List.Item>
+                    <List.Item>
+                        <List.Content>Which of these features would you like? {multiFeatureAnswer}</List.Content>
                     </List.Item>
                 </List>
 
