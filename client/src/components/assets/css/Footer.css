@@ -1,0 +1,8 @@
+.grid-container2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* grid-template-columns: 25% 25% 30% 20%; */
+    grid-template-rows: 1fr;
+  }
+  
+ 

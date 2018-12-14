@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import {BrowserRouter as Router, Switch, Link, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Nav from './Nav';
 import Footer from './Footer';
 import BuildSolution from './BuildSolution';
 import Checkout from './Checkout';
 import Product from './Product';
+import CreateProfile from './CreateProfile';
 class Home extends Component {
   render() {
     return (
@@ -15,6 +16,7 @@ class Home extends Component {
                   <Route exact path='/build-a-solution' component={BuildSolution} />
                   <Route exact path='/checkout' component={Checkout} />
                   <Route exact path='/products' component={Product} />
+                  <Route exact path='/create-profile' component={CreateProfile} />
                 </Switch>
               <Footer />
             </div>
