@@ -44,6 +44,7 @@ margin-bottom: 50px;
         font-weight: lighter;
     }
 }
+
 `
 const ButtonStyles = styled.div`
   button {
