@@ -16,19 +16,28 @@ footer {
 }
 .ncr-silver{
   font-weight: bold;
+ 
+}
+h5{
+  font-weight: lighter;
 }
 
 ul{
   list-style-type: none;
 }
-
+li{
+  font-size: 20px;
+}
+.list{
+    font-weight: 200;
+}
 input{
   border-radius:5px;
   float: right;
   margin-right: 20px;
 }
-
 `
+
 
 class Footer extends Component {
   render() {
@@ -39,10 +48,12 @@ class Footer extends Component {
             <div className="ncr-silver">
               <ul>
                 <li>NCR SILVER </li>
-                <li>About</li>
-                <li>Products</li>
-                <li>Build A Solution</li>
-                <li>Support</li>
+                <div className='list'>
+                  <li>About</li>
+                  <li>Products</li>
+                  <li>Build A Solution</li>
+                  <li>Support</li>
+                </div>
               </ul>
             </div>
             {/* <div>
@@ -60,35 +71,73 @@ class Footer extends Component {
                     <li>Food Trucks</li>
                   </ul>
                 </div> */}
+
+          </footer>
+        </FooterBar>
+        <FooterBar>
+          <footer>
+            <div className="ncr-silver">
+              <ul>
+                <li>NCR SILVER </li>
+                <div className='list'>
+                  <li>About</li>
+                  <li>Products</li>
+                  <li>Build A Solution</li>
+                  <li>Support</li>
+                </div>
+              </ul>
+            </div>
+          </footer>
+        </FooterBar>
+        <FooterBar>
+          <footer>
+            <div className="ncr-silver">
+              <ul>
+                <li>NCR SILVER </li>
+                <div className='list'>
+                  <li>About</li>
+                  <li>Products</li>
+                  <li>Build A Solution</li>
+                  <li>Support</li>
+                </div>
+              </ul>
+            </div>
+          </footer>
+        </FooterBar>
+        <FooterBar>
+          <footer>
+            <div className="ncr-silver">
+              <ul>
+                <li>NCR SILVER </li>
+                <div className='list'>
+                  <li>About</li>
+                  <li>Products</li>
+                  <li>Build A Solution</li>
+                  <li>Support</li>
+                </div>
+              </ul>
+            </div>
+          </footer>
+        </FooterBar>
+        {/* <FooterBar>
+          <footer>
+          <div className="ncr-silver">
+              <ul>
+                <li>NCR SILVER </li>
+                <li>About</li>
+                <li>Products</li>
+                <li>Build A Solution</li>
+                <li>Support</li>
+              </ul>
+            </div>
+          </footer>
+        </FooterBar> */}
+        <FooterBar>
+          <footer>
+            <h5>>Sign up for Our Webinar</h5>
             <form>
               <input type="text" placeholder="Enter Email" />
             </form>
-          </footer>
-        </FooterBar>
-        <FooterBar>
-          <footer>
-            <div className="ncr-silver">
-              <ul>
-                <li>NCR SILVER </li>
-                <li>About</li>
-                <li>Products</li>
-                <li>Build A Solution</li>
-                <li>Support</li>
-              </ul>
-            </div>
-          </footer>
-        </FooterBar>
-        <FooterBar>
-          <footer>
-            <div className="ncr-silver">
-              <ul>
-                <li>NCR SILVER </li>
-                <li>About</li>
-                <li>Products</li>
-                <li>Build A Solution</li>
-                <li>Support</li>
-              </ul>
-            </div>
           </footer>
         </FooterBar>
       </div>
@@ -96,4 +145,4 @@ class Footer extends Component {
   }
 }
 
- export default Footer;
+export default Footer;
