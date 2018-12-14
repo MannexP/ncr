@@ -20,8 +20,8 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('api-auth'), include('rest_framework.urls'),
-    path('rest-auth/', include('rest_auth.urls')),
+    # path('api-auth/'), include('rest_framework.urls'),
+    url(r'^rest-auth/', include('rest_auth.urls')),
     path('rest-auth/registration/', include('rest_auth.registration.urls')),
     path('admin/', admin.site.urls),
     url(r'^$', views.FrontendAppView.as_view())
