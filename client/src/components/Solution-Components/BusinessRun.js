@@ -27,7 +27,6 @@ class BusinessType extends Component {
 render(){
     return(
       <Form color='green' >
-        <h1 className="ui centered"></h1>
         <SolutionStyles>
           <div>
             <Icon onClick={this.back} aria-hidden="true" className="chevron left big"></Icon>

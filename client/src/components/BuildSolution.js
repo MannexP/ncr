@@ -5,6 +5,7 @@ import Confirmation from './Solution-Components/Confirmation';
 import Success from './Solution-Components/Success';
 import BusinessType from './Solution-Components/BusinessType';
 import Features from './Solution-Components/Features';
+import MultiFeature from './Solution-Components/MultiFeature';
 
 class BuildSolution extends Component {
 	state = {
@@ -33,7 +34,15 @@ class BuildSolution extends Component {
 
   handleChange = event => {
     if(event.target.name === 'multiFeatureAnswer'){
-      const expandState = [...this.state.multiFeatureAnswer]
+      if(event.target.checked == true){
+        const expandState = [...this.state.multiFeatureAnswer, event.target.value ]
+        this.setState({ multiFeatureAnswer: expandState })
+      }else{
+        const newList = [...this.state.multiFeatureAnswer].filter(list => {
+          return list !== event.target.value
+        })
+        this.setState({ multiFeatureAnswer: newList })
+      }
     } else {
       this.setState({ [event.target.name] : event.target.value })
     }
@@ -73,12 +82,19 @@ class BuildSolution extends Component {
         values={values}
         />
     case 5:
+      return <MultiFeature
+        nextStep={this.nextStep}
+        prevStep={this.prevStep}
+        handleChange = {this.handleChange}
+        values={values}
+        />
+    case 6:
       return <Confirmation
         nextStep={this.nextStep}
         prevStep={this.prevStep}
         values={values}
         />
-    case 6:
+    case 7:
       return <Success />
     }
 	}

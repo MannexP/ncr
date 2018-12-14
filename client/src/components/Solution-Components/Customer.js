@@ -20,7 +20,6 @@ class Customer extends Component {
   render() {
     return (
       <Form color='green' >
-        <h1 className="ui centered"></h1>
         <SolutionStyles>
         <div className="grouped fields">
           <label>Are you an existing customer?</label>

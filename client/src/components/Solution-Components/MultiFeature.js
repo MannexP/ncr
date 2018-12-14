@@ -14,26 +14,29 @@ class MultiFeature extends Component {
     e.preventDefault()
     this.props.nextStep()
   }
+  back  = (e) => {
+    e.preventDefault();
+    this.props.prevStep();
+  }
   onChange = (event) => {
+    console.log(this.props.values)
     this.props.handleChange(event)
   }
   render() {
-    console.log("hit")
     return (
       <Form color='green' >
-        <h1 className="ui centered"></h1>
         <SolutionStyles>
         <div className="grouped fields">
-          <label>What type of business are you?</label>
+          <label>Which of these features would you like to include?</label>
           <div className="field">
-          <input onClick={this.onChange} type="checkbox" name="multiFeatureAnswer" value="Full Service Resturant" />
-            <label>Full Service Resturant</label>
-            <input onClick={this.onChange} type="checkbox" name="multiFeatureAnswer" value="Retail" />
-            <label>Retail</label>
-            <input onClick={this.onChange} type="checkbox" name="multiFeatureAnswer" value="Service" />
-            <label> Service</label>
-            <input onClick={this.onChange} type="checkbox" name="multiFeatureAnswer" value="Cafe or Food Truck" />
-            <label>Cafe or Food Truck</label>
+          <input onClick={this.onChange} type="checkbox" name="multiFeatureAnswer" value="Advance Reporting/Forcasting" />
+            <label>Advance Reporting/Forcasting</label>
+            <input onClick={this.onChange} type="checkbox" name="multiFeatureAnswer" value="Inventory Management" />
+            <label>Inventory Management</label>
+            <input onClick={this.onChange} type="checkbox" name="multiFeatureAnswer" value="Employee Scheduling" />
+            <label> Employee Scheduling</label>
+            <input onClick={this.onChange} type="checkbox" name="multiFeatureAnswer" value="None of These" />
+            <label>None of These</label>
           </div>
         </div>
           <div>

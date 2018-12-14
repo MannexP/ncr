@@ -14,6 +14,10 @@ class BusinessType extends Component {
     e.preventDefault()
     this.props.nextStep()
   }
+  back  = (e) => {
+    e.preventDefault();
+    this.props.prevStep();
+}
   onChange = (event) => {
     this.props.handleChange(event)
   }
@@ -21,8 +25,10 @@ class BusinessType extends Component {
     console.log("hit")
     return (
       <Form color='green' >
-        <h1 className="ui centered"></h1>
         <SolutionStyles>
+        <div>
+          <Icon onClick={this.back} aria-hidden="true" className="chevron left big"></Icon>
+        </div>
         <div className="grouped fields">
           <label>What type of business are you?</label>
           <div className="field">
