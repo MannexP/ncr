@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import styled from 'styled-components';
-// import logo from 'assets/images/checkIcon.png'
+import logo from '../images/Icon.png'
 
 
 
@@ -42,8 +42,10 @@ margin-bottom: 50px;
 .details {
     h4{
         font-weight: lighter;
+        display:flex;
     }
-}
+
+
 
 `
 const ButtonStyles = styled.div`
@@ -84,11 +86,12 @@ class OutlinedTextFields extends React.Component {
                     <form className={classes.container} noValidate autoComplete="off">
                         <div className="details">
                             <h1>Create Profile</h1>
-                            <h4>Save your info for faster check-outs</h4>
-                            <h4>Easily track your orders</h4>
-                            <h4>Product suggestions tailored to you</h4>
+                            <div>
+                                <div><img src={logo} alt="icon" height="20px"/><h4>Save your info for faster check-outs</h4></div>
+                                <div><img src={logo} alt="icon" height="20px"/><h4>Easily track your orders</h4></div>
+                                <div><img src={logo} alt="icon" height="20px"/><h4>Product suggestions tailored to you</h4></div>
+                            </div> 
                         </div>
-
                         <TextField
                             className={classes.textField}
                             label="Img"
