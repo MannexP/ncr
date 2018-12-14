@@ -1,24 +1,3 @@
-// import React, { Component } from 'react';
-// import QuickPay from './Checkout-Components/QuickPay';
-// import ContactInfoForm from './Checkout-Components/ContactInfoForm';
-// import NextButton from './Checkout-Components/NextButton';
-// import ShippingForm from './Checkout-Components/ShippingForm';
-
-// class Checkout extends Component {
-//   render() {
-//     return (
-//       <div>
-//         <QuickPay />
-//         <ContactInfoForm />
-//         <NextButton />
-//         <ShippingForm />
-//         <NextButton />
-//       </div>
-//     );
-//   }
-// }
-
-// export default Checkout;
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -32,10 +11,10 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import QuickPay from './Checkout-Components/QuickPay';
 import ContactInfoForm from './Checkout-Components/ContactInfoForm';
-import NextButton from './Checkout-Components/NextButton';
 import ShippingForm from './Checkout-Components/ShippingForm';
 import BillingForm from './Checkout-Components/BillingForm';
 import green from '@material-ui/core/colors/green';
+import classNames from 'classnames';
 
 const styles = theme => ({
   root: {
@@ -51,6 +30,13 @@ const styles = theme => ({
   resetContainer: {
     padding: theme.spacing.unit * 3,
   },
+  cssRoot: {
+    color: theme.palette.getContrastText(green[900]),
+    backgroundColor: green[500],
+    '&:hover': {
+      backgroundColor: green[700],
+    },
+  }
 });
 
 function getSteps() {
@@ -118,12 +104,12 @@ class VerticalLinearStepper extends React.Component {
                       >
                         Back
                       </Button>
-                     {/* FIXME: <NextButton/> */}
+                     
                       <Button
                         variant="contained"
                         color="primary"
                         onClick={this.handleNext}
-                        className={classes.button}
+                        className={classNames(classes.button, classes.cssRoot)}
                       >
                         {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
                       </Button>
