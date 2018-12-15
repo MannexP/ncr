@@ -22,7 +22,6 @@ class BuildSolution extends Component {
     this.setState({
       step : step + 1
     })
-    console.log(step)
   }
 
   prevStep = () => {
