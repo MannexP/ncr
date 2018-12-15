@@ -84,6 +84,7 @@ grid-template-columns:1fr 1fr;
 
 class OutlinedTextFields extends React.Component {
     state = {
+        profiles: [],
         newProfile: {
             img_url: '',
             first_name: '',
