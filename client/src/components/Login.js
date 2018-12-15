@@ -40,6 +40,7 @@ class Login extends React.Component {
           logged_in: true,
           username: res.data.user.username
         })
+        this.props.history.push(`/products`)
       })
   }
 
