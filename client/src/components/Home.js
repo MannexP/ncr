@@ -7,6 +7,7 @@ import Checkout from './Checkout';
 import Product from './Product';
 import CreateProfile from './CreateProfile';
 import ThankYou from './Checkout-Components/ThankYou';
+import LandingPage from './LandingPage';
 class Home extends Component {
   render() {
     return (
@@ -19,6 +20,7 @@ class Home extends Component {
                   <Route exact path='/products' component={Product} />
                   <Route exact path='/create-profile' component={CreateProfile} />
                   <Route exact path='/ThankYou' component={ThankYou} />
+                  <Route path='/' component={LandingPage} />
          
                 </Switch>
               <Footer />
