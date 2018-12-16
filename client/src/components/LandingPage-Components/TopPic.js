@@ -22,7 +22,7 @@ class TopPic extends Component {
                 <img src={quantum} alt="top pic" width="100%"/>
                 <img src={features} alt="top pic" width="100%" />
                
-                <video className='videoTag' autoPlay loop muted>
+                <video controls className='videoTag' autoPlay loop muted>
     <source src={sample} type='video/mp4' width="400"/>
                 </video>
       
