@@ -60,10 +60,11 @@ function getStepContent(step) {
 class VerticalLinearStepper extends React.Component {
   state = {
     activeStep: 0,
-    logged_in: localStorage.getItem('token') ? true : false
+    logged_in: localStorage.getItem('token') ? true : false,
+    checkout: localStorage.getItem('checkout') ? true : false
   };
   componentDidMount() {
-    if (this.state.logged_in) {
+    if (this.state.logged_in || this.state.checkout) {
       axios.get('/api/current_user/')
         .then(res => {
           console.log(res)

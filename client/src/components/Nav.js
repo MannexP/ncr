@@ -16,10 +16,10 @@ class Nav extends Component {
           <div className="Right">
             <div className="Nav">
               <ul className="flexed">
-              <li><Link to='#' className="titles" style={{ textDecoration: 'none', color: '#FFFFFF' }}>ABOUT</Link></li>
-              <li><Link to='#' className="titles" style={{ textDecoration: 'none', color: '#FFFFFF' }}>PRODUCTS</Link></li>
-              <li><Link to='#' className="titles" style={{ textDecoration: 'none', color: '#FFFFFF' }}>BUILD A SOLUTION</Link></li>
-              <li><Link to='#' className="titles" style={{ textDecoration: 'none', color: '#FFFFFF'}}>SUPPORT</Link></li>
+              <li><Link to='/' className="titles" style={{ textDecoration: 'none', color: '#FFFFFF' }}>ABOUT</Link></li>
+              <li><Link to='/products' className="titles" style={{ textDecoration: 'none', color: '#FFFFFF' }}>PRODUCTS</Link></li>
+              <li><Link to='/build-a-solution' className="titles" style={{ textDecoration: 'none', color: '#FFFFFF' }}>BUILD A SOLUTION</Link></li>
+              <li><Link to='/' className="titles" style={{ textDecoration: 'none', color: '#FFFFFF'}}>SUPPORT</Link></li>
               </ul>
             </div>
             <div className="icons">

@@ -32,7 +32,6 @@ justify-content: center;
 max-width: 300px;
 margin: 10px;
 padding-right: 50px;
-padding:
 border-radius: 8px;
 margin-left: 400px;
 margin-top: 50px;
@@ -43,7 +42,24 @@ border-right: groove;
 		font-weight: lighter;
 		display:flex;
 	}
+}
 `
+const Checkout = styled.div`
+.guestCheck{
+margin-left:250px;
+margin-top:250px;
+width:200px;
+display: flex;
+justify-content: center;
+flex-direction: column;
+}
+h3{
+    align-content: center;
+    
+}
+
+`
+
 const ButtonStyles = styled.div`
 button {
 	background-color: #4CAF50; /* Green */
@@ -67,8 +83,15 @@ class Signup extends Component {
 	state = {
 		username: '',
 		email: '',
-		password: ''
-	}
+    password: '',
+    checkout: false
+  }
+  handleCheckout = () => {
+    localStorage.setItem('checkout', true);
+    this.setState({checkout: true})
+    this.props.history.push(`/checkout`)
+  }
+
 
 	handleSignup = (e) => {
 		e.preventDefault();
@@ -101,6 +124,7 @@ class Signup extends Component {
 	render() {
 		const { classes } = this.props;
 		return (
+      <div>
 			<FormStyles>
 			<form onSubmit={e => this.handleSignup(e)}>
 				<h4>Sign Up</h4>
@@ -137,11 +161,22 @@ class Signup extends Component {
 					value={this.state.password}
 					onChange={this.handleChange}
 				/>
-        <ButtonStyles>
+					<ButtonStyles>
 					<button type="submit">Sign Up</button>
 				</ButtonStyles>
 			</form>
 			</FormStyles>
+				<Checkout>
+					<div className="guestCheck">
+						<div className="or">
+							<h3>OR</h3>
+						</div>
+						<ButtonStyles>
+							<button onClick={this.handleCheckout} type="submit">Checkout as Guest</button>
+						</ButtonStyles>
+					</div>
+					</Checkout>
+          </div>
 		);
 	}
 }

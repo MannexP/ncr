@@ -38,7 +38,7 @@ class Confirmation extends Component{
                 </List>
 
                 <Button onClick={this.back}>Back</Button>
-                <Button onClick={this.saveAndContinue}>Confirm</Button>
+                <Button onClick={this.saveAndContinue}>View Suggestions</Button>
             </div>
         )
     }
