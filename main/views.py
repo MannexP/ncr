@@ -38,13 +38,13 @@ class ProfileView(viewsets.ModelViewSet):
 
 
 class ProductView(viewsets.ModelViewSet):
-    # permission_classes = (IsAdminOrReadOnly,)
+    permission_classes = (IsAdminOrReadOnly,)
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
 
 
 class ProductTypeView(viewsets.ModelViewSet):
-    # permission_classes = (IsAdminOrReadOnly,)
+    permission_classes = (IsAdminOrReadOnly,)
     queryset = ProductType.objects.all()
     serializer_class = ProductTypeSerializer
 
