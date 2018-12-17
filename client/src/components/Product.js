@@ -11,8 +11,12 @@ class Product extends Component {
     }
 
     componentDidMount() {
+<<<<<<< HEAD
         axios.get(`/api/product/`).then(res => {
             console.log(res.data)
+=======
+        axios.get(`/api/product/`).then(res =>{
+>>>>>>> bad8c939ce30affb4ef37bcd2376aacc36a59362
             this.setState({
                 product: res.data
 

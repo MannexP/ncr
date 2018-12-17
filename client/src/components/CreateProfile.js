@@ -5,6 +5,8 @@ import TextField from '@material-ui/core/TextField';
 import styled from 'styled-components';
 import logo from '../images/Icon.png'
 import axios from 'axios'
+axios.defaults.xsrfCookieName = 'csrftoken'
+axios.defaults.xsrfHeaderName = 'X-CSRFToken'
 
 
 const styles = theme => ({
@@ -30,7 +32,6 @@ justify-content: center;
 max-width: 300px;
 margin: 10px;
 padding-right: 50px;
-padding:
 border-radius: 8px;
 margin-left: 400px;
 margin-top: 50px;
@@ -41,10 +42,10 @@ border-right: groove;
         font-weight: lighter;
         display:flex;
     }
-`
+}`
 const ButtonStyles = styled.div`
 button {
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50;
     border: none;
     color: white;
     padding: 15px 20px;
@@ -71,14 +72,12 @@ h3{
     align-content: center;
     
 }
+}
 `
 
-
-const Profile = styled.div
-    `
+const Profile = styled.div`
 display:grid;
 grid-template-columns:1fr 1fr;
-
 `
 
 
@@ -86,23 +85,27 @@ class OutlinedTextFields extends React.Component {
     state = {
         profiles: [],
         newProfile: {
-            img_url: '',
+            image_url: '',
             first_name: '',
             last_name: '',
             phone: '',
         }
     };
 
-    handleChange = name => event => {
+    handleChange = (e) => {
+        const profile = {...this.state.newProfile}
+        profile[e.target.name] = e.target.value
         this.setState({
-            [name]: event.target.value,
+            newProfile: profile
         });
     };
 
     handleSubmit = (event) => {
         event.preventDefault()
-        axios.post('/api/profile', this.state.newProfile).then(res => {
-            this.props.history.push(`/profile/${res.data._id}`)
+        console.log("BEFORE POST", this.state.newProfile)
+        axios.post('/api/profile/', this.state.newProfile).then(res => {
+            console.log("RES", res.data)
+            this.props.history.push(`/profile/${res.data.id}`)
         })
     }
     render() {
@@ -110,7 +113,7 @@ class OutlinedTextFields extends React.Component {
         return (
             <Profile>
                 <FormStyles>
-                    <form className={classes.container} noValidate autoComplete="off">
+                    <form onSubmit={this.handleSubmit} className={classes.container} noValidate autoComplete="off">
                         <div className="details">
                             <h1>Create Profile</h1>
                             <div>
@@ -120,6 +123,8 @@ class OutlinedTextFields extends React.Component {
                             </div>
                         </div>
                         <TextField
+                        name="image_url"
+                            onChange={this.handleChange}
                             className={classes.textField}
                             label="Img"
                             variant="outlined"
@@ -127,6 +132,8 @@ class OutlinedTextFields extends React.Component {
                             id="outlined-name"
                         />
                         <TextField
+                        name="first_name"
+                            onChange={this.handleChange}
                             id="outlined-uncontrolled"
                             label="First Name"
                             className={classes.textField}
@@ -134,6 +141,8 @@ class OutlinedTextFields extends React.Component {
                             variant="outlined"
                         />
                         <TextField
+                        name="last_name"
+                        onChange={this.handleChange}
                             required
                             id="outlined-required"
                             label="Last Name"
@@ -142,6 +151,8 @@ class OutlinedTextFields extends React.Component {
                             variant="outlined"
                         />
                         <TextField
+                        name="phone"
+                        onChange={this.handleChange}
                             required
                             id="outlined-required"
                             label="Phone Number"

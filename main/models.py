@@ -8,7 +8,8 @@ class Profile(models.Model):
     image_url = models.TextField()
     first_name = models.CharField(max_length=200)
     last_name = models.CharField(max_length=200)
-    phone = models.IntegerField(default=0)
+    phone = models.CharField(max_length=30)
+    user = models.ForeignKey('auth.User', on_delete=models.CASCADE, related_name="profiles")
 
     def __str__(self):
         return self.name
