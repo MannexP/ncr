@@ -23,7 +23,7 @@ const styles = theme => ({
       marginTop: 16,
     },
     menu: {
-      width: 200,
+      width: 500,
     },
   });
   
@@ -326,7 +326,7 @@ const states = [
            <div>
         <TextField required
             id="outlined-with-placeholder"
-            label="City"
+                label="City"
             placeholder="City"
             className={classes.textField}
             margin="normal"

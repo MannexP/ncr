@@ -15,6 +15,8 @@ import ShippingForm from './Checkout-Components/ShippingForm';
 import BillingForm from './Checkout-Components/BillingForm';
 import green from '@material-ui/core/colors/green';
 import classNames from 'classnames';
+import axios from 'axios';
+import ShoppingCartProducts from './Checkout-Components/ShoppingCartProducts';
 
 const styles = theme => ({
   root: {
@@ -59,7 +61,20 @@ function getStepContent(step) {
 class VerticalLinearStepper extends React.Component {
   state = {
     activeStep: 0,
+    logged_in: localStorage.getItem('token') ? true : false,
+    checkout: localStorage.getItem('checkout') ? true : false
   };
+  componentDidMount() {
+    if (this.state.logged_in || this.state.checkout) {
+      axios.get('/api/current_user/')
+        .then(res => {
+          console.log(res)
+          this.setState({ username: res.data.username })
+        })
+    } else {
+      this.props.history.push(`/signup`)
+    }
+  }
 
   handleNext = () => {
     this.setState(state => ({
@@ -87,6 +102,7 @@ class VerticalLinearStepper extends React.Component {
     return (
       
       <div className={classes.root}>
+      <ShoppingCartProducts />
         <QuickPay />
         <Stepper activeStep={activeStep} orientation="vertical">
           {steps.map((label, index) => {

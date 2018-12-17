@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 import Customer from './Solution-Components/Customer';
 import BusinessRun from './Solution-Components/BusinessRun';
 import Confirmation from './Solution-Components/Confirmation';
-import Success from './Solution-Components/Success';
 import BusinessType from './Solution-Components/BusinessType';
 import Features from './Solution-Components/Features';
 import MultiFeature from './Solution-Components/MultiFeature';
-
+import SolutionProducts from './Solution-Components/SolutionProducts';
 class BuildSolution extends Component {
 	state = {
 		step: 1,
@@ -22,7 +21,6 @@ class BuildSolution extends Component {
     this.setState({
       step : step + 1
     })
-    console.log(step)
   }
 
   prevStep = () => {
@@ -34,7 +32,7 @@ class BuildSolution extends Component {
 
   handleChange = event => {
     if(event.target.name === 'multiFeatureAnswer'){
-      if(event.target.checked == true){
+      if(event.target.checked === true){
         const expandState = [...this.state.multiFeatureAnswer, event.target.value ]
         this.setState({ multiFeatureAnswer: expandState })
       }else{
@@ -49,7 +47,7 @@ class BuildSolution extends Component {
 
   }
 
-  render(){
+  render() {
 	  const {step} = this.state;
 	  const { customerAnswer, businessRunAnswer, businessTypeAnswer, featureAnswer, multiFeatureAnswer } = this.state;
 	  const values = { customerAnswer, businessRunAnswer, businessTypeAnswer, featureAnswer, multiFeatureAnswer };
@@ -95,8 +93,15 @@ class BuildSolution extends Component {
         values={values}
         />
     case 7:
-      return <Success />
+      return <SolutionProducts />
+    default:
+      return <Customer 
+      nextStep={this.nextStep} 
+      handleChange = {this.handleChange}
+      values={values}
+      />
     }
+   
 	}
 }
 

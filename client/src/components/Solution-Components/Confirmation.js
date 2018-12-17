@@ -3,8 +3,8 @@ import { Button, List } from 'semantic-ui-react';
 
 class Confirmation extends Component{
     saveAndContinue = (e) => {
-        e.preventDefault();
-        this.props.nextStep();
+        this.props.history.push('/build-solution')
+
     }
 
     back  = (e) => {
@@ -14,7 +14,6 @@ class Confirmation extends Component{
 
     render(){
         const {values: { customerAnswer, businessRunAnswer, businessTypeAnswer, featureAnswer, multiFeatureAnswer }} = this.props;
-        console.log(customerAnswer)
         return(
             <div>
                 <h1 className="ui centered">Confirm your Details</h1>
@@ -39,7 +38,7 @@ class Confirmation extends Component{
                 </List>
 
                 <Button onClick={this.back}>Back</Button>
-                <Button onClick={this.saveAndContinue}>Confirm</Button>
+                <Button onClick={this.saveAndContinue}>View Suggestions</Button>
             </div>
         )
     }

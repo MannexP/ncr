@@ -8,10 +8,12 @@ class Profile(models.Model):
     image_url = models.TextField()
     first_name = models.CharField(max_length=200)
     last_name = models.CharField(max_length=200)
-    phone = models.IntegerField(default=0)
+    phone = models.CharField(max_length=30)
+    user = models.ForeignKey('auth.User', on_delete=models.CASCADE, related_name="profiles")
 
     def __str__(self):
         return self.name
+
 
 class Shipping(models.Model):
     company_name = models.CharField(max_length=200)
@@ -33,6 +35,7 @@ class ProductType(models.Model):
     def __str__(self):
         return self.name
 
+
 class Product(models.Model):
     name = models.CharField(max_length=200)
     image_url = models.TextField()
@@ -43,6 +46,7 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
+
 class ShoppingCart(models.Model):
     product_id = models.CharField(max_length=200)
     quantity = models.CharField(max_length=200)
@@ -52,7 +56,7 @@ class ShoppingCart(models.Model):
 class Billing(models.Model):
     card_number = models.IntegerField(default=0)
     card_name = models.CharField(max_length=200)
-    cvv = models.IntegerField(default=0, max_length=3)
+    cvv = models.IntegerField(default=0)
     expiration_date = models.DateField()
     shipping_id = models.ForeignKey(Shipping, on_delete=models.CASCADE, related_name='billing')
     profile_id = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name='billing')
