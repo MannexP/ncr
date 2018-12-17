@@ -1,22 +1,26 @@
-import React from 'react';
+import React, { Component } from 'react'
 import axios from 'axios'
 
-class Signup extends React.Component {
+class Signup extends Component {
   state = {
     username: '',
     email: '',
-    password: '',
-    logged_in: false,
+    password: ''
   }
 
-  handleSignup = (e, data) => {
+  handleSignup = (e) => {
     e.preventDefault();
-    axios.post('/api/users/', data)
+    const payload ={
+      username: this.state.username,
+      email: this.state.email,
+      password: this.state.password,
+    }
+    axios.post('/api/users/', payload)
       .then(res => {
         localStorage.setItem('token', res.data.token);
         this.setState({
           logged_in: true,
-          username: res.data.user.username
+          username: res.data.username
         })
       })
   }
@@ -33,7 +37,7 @@ class Signup extends React.Component {
 
   render() {
     return (
-      <form onSubmit={e => this.handleSignup(e, this.state)}>
+      <form onSubmit={e => this.handleSignup(e)}>
         <h4>Sign Up</h4>
         <label htmlFor="username">Username</label>
         <input
