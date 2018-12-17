@@ -11,6 +11,7 @@ import smarts from './images/smarts.png';
 import solution from './images/solutionbuild.png';
 import support from './images/support.png';
 import sample from './videos/juiceStore.mp4';
+import { Link } from "react-router-dom";
 
 class TopPic extends Component {
     render() {
@@ -31,7 +32,7 @@ class TopPic extends Component {
                 <img src={lighting} alt="top pic"/>
                 <img src={customers} alt="top pic"/>
                 <img src={smarts} alt="top pic"/>
-                <img src={solution} alt="top pic" width="100%"/>
+                <Link to='/build-a-solution'><img src={solution} alt="top pic" width="100%"/></Link>
                 <img src={support} alt="top pic" width="100%"/>
                 
             </div>
