@@ -6,6 +6,11 @@ import BuildSolution from './BuildSolution';
 import Checkout from './Checkout';
 import Product from './Product';
 import CreateProfile from './CreateProfile';
+import Profile from './Profile/Profile'
+import ThankYou from './Checkout-Components/ThankYou';
+import LandingPage from './LandingPage';
+import Login from './Login'
+import Signup from './Signup'
 class Home extends Component {
   render() {
     return (
@@ -17,6 +22,11 @@ class Home extends Component {
                   <Route exact path='/checkout' component={Checkout} />
                   <Route exact path='/products' component={Product} />
                   <Route exact path='/create-profile' component={CreateProfile} />
+                  <Route exact path='/profile' component={Profile} />
+                  <Route exact path='/ThankYou' component={ThankYou} />
+                  <Route path='/' component={LandingPage} />
+                  <Route exact path='/login' component={Login} />
+                  <Route exact path='/signup' component={Signup} />
                 </Switch>
               <Footer />
             </div>

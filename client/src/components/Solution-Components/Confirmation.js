@@ -14,7 +14,6 @@ class Confirmation extends Component{
 
     render(){
         const {values: { customerAnswer, businessRunAnswer, businessTypeAnswer, featureAnswer, multiFeatureAnswer }} = this.props;
-        console.log(customerAnswer)
         return(
             <div>
                 <h1 className="ui centered">Confirm your Details</h1>
