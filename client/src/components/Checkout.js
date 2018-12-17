@@ -16,6 +16,7 @@ import BillingForm from './Checkout-Components/BillingForm';
 import green from '@material-ui/core/colors/green';
 import classNames from 'classnames';
 import axios from 'axios';
+import ShoppingCartProducts from './Checkout-Components/ShoppingCartProducts';
 
 const styles = theme => ({
   root: {
@@ -101,6 +102,7 @@ class VerticalLinearStepper extends React.Component {
     return (
       
       <div className={classes.root}>
+      <ShoppingCartProducts />
         <QuickPay />
         <Stepper activeStep={activeStep} orientation="vertical">
           {steps.map((label, index) => {
