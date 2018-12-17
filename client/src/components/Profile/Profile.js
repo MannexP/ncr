@@ -19,21 +19,17 @@ display: grid;
                 width: 200px;
                 margin-top: 20px;
                 border-radius:50%;
-        }     
+        }   
    }
-  .two{       
-        .rOrders{
-            display: grid;
-            grid-template-columns: 30% 20% 20% 30%;
-            border: solid 2px;
-            height: 125px;
-            width: 80%;
-            margin-left: 200px;
-            margin-top: 150px;
-        }
-    }
-    
 }  
+`
+
+const FlexContainer = styled.div`
+        display: grid;
+        grid-template-columns: 30% 20% 20% 30%;    
+        border: solid 2px;
+        height: 125px;
+        width: 80%;
 `
 
 class Profile extends Component {
@@ -47,14 +43,14 @@ class Profile extends Component {
                     </div>
                 </div>
                 <div className="two">
-                    <div className='contatiner'>
+                    <div className='container'>
                         <h1>Recent Orders</h1>
-                        <div className="rOrders">
-                            <div className="orderPlaced"></div>
-                            <div className="total"></div>
-                            <div className="shipping"></div>
-                            <div className="orderNumber"></div>
-                        </div>
+                        <FlexContainer>
+                            <div className="orderPlaced">Order Placed</div>
+                            <div className="total">Total</div>
+                            <div className="shipping">Shipping To</div>
+                            <div className="orderNumber">Order Number</div>
+                        </FlexContainer>
                     </div>    
                 </div>
                 <div className="three">
