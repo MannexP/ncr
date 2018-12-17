@@ -9,7 +9,11 @@ class SolutionProducts extends Component {
     axios.get(`/api/product/`).then(res =>{
         this.setState({ products: res.data })
     })
-}
+  }
+
+  handleClick = (product) => {
+    console.log(product)
+  }
   render() {
     return (
       <div>
@@ -18,6 +22,7 @@ class SolutionProducts extends Component {
             <h1>{product.name}</h1>
             <p>{product.description}</p>
             <h2>price: ${product.price}</h2>
+            <button onClick={() => this.handleClick(product)}>Add to cart</button>
             </div>
         ))}
       </div>
