@@ -35,9 +35,12 @@ const FlexContainer = styled.div`
 const FlexContainer2 = styled.div`
        display: grid;
        grid-template-columns: 30% 30% 30%;
-       border: solid 5px;
+       border: solid 3.5px;
+       border-bottom: solid 7px;
        border-style: groove;
-       height: 175px;
+       border-bottom-style: groove;
+       
+       height: 200px;
        width: 100%;
        padding: 10px;
 `
