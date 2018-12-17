@@ -8,7 +8,6 @@ class Product extends Component {
 
     componentDidMount() {
         axios.get(`/api/product/`).then(res =>{
-            console.log(res.data)
             this.setState({
                 product: res.data
 
