@@ -3,8 +3,7 @@ import styled from 'styled-components';
 
 
 
-const ProfileStyles = styled.div
-    `
+const ProfileStyles = styled.div`
 display: grid;
   grid-template-columns: 20% 80%;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
@@ -23,9 +22,7 @@ height:1000px;
     }
 }
   
-
   .two{
-
       align-content: center;
 
       h1{
@@ -33,12 +30,20 @@ height:1000px;
        
       }
   
+      .container{
+        border-width:5px;  
+        border-style:groove;
+        height: 125px;
+        width: 80%;
+        margin-left: 200px;
+        margin-top: 150px;
+
+      }
     .rOrders{
         display: grid;
-        grid-template-columns;
-
-
-        border: solid 2px;
+        grid-template-columns: 4;
+        border-width: 5px;  
+        border-style:groove;
         height: 125px;
         width: 80%;
         margin-left: 200px;
@@ -61,7 +66,7 @@ class Profile extends Component {
                     </div>
                 </div>
                 <div className="two">
-                    <div className='contatiner'>
+                    <div className='container'>
                         <h1>Recent Orders</h1>
                         <div className="rOrders">
                             <div className="orderPlaced"></div>
