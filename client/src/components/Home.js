@@ -24,9 +24,9 @@ class Home extends Component {
                   <Route exact path='/create-profile' component={CreateProfile} />
                   <Route exact path='/profile' component={Profile} />
                   <Route exact path='/ThankYou' component={ThankYou} />
-                  <Route path='/' component={LandingPage} />
                   <Route exact path='/login' component={Login} />
                   <Route exact path='/signup' component={Signup} />
+                  <Route path='/' component={LandingPage} />
                 </Switch>
               <Footer />
             </div>

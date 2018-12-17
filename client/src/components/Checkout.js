@@ -15,6 +15,7 @@ import ShippingForm from './Checkout-Components/ShippingForm';
 import BillingForm from './Checkout-Components/BillingForm';
 import green from '@material-ui/core/colors/green';
 import classNames from 'classnames';
+import axios from 'axios';
 
 const styles = theme => ({
   root: {
@@ -59,7 +60,19 @@ function getStepContent(step) {
 class VerticalLinearStepper extends React.Component {
   state = {
     activeStep: 0,
+    logged_in: localStorage.getItem('token') ? true : false
   };
+  componentDidMount() {
+    if (this.state.logged_in) {
+      axios.get('/api/current_user/')
+        .then(res => {
+          console.log(res)
+          this.setState({ username: res.data.username })
+        })
+    } else {
+      this.props.history.push(`/signup`)
+    }
+  }
 
   handleNext = () => {
     this.setState(state => ({
