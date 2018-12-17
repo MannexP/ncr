@@ -1,0 +1,34 @@
+[
+    {
+        "id": 4,
+        "name": "Credit Card Reader",
+        "image_url": "http://www.beaglehardware.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/m/a/magtekidynamo.png",
+        "price": "79.00",
+        "description": "Works with the iPad with Retina display and iPad mini. Leverage the power of your iPad, iPhone or iPod touch at any time without the worries of handling or storing sensitive credit card data.  This is a secure card reader that delivers end-to-end encryption of card data to maximaze data protection and prevent the use of counterfeit cards.",
+        "product_type_id": 1
+    },
+    {
+        "id": 2,
+        "name": "Compact Scanner",
+        "image_url": "http://res.cloudinary.com/resay-public/image/upload/v1513798681/products/large/ds9208.jpg",
+        "price": "285.00",
+        "description": "The NCR real POS Compact Presentation Image offers an affordable combination of features to increase productivity at the checkout. Scanning printed labels and mobile coupons is possible with compact scanner.",
+        "product_type_id": 1
+    },
+    {
+        "id": 3,
+        "name": "M10 Lock Stand",
+        "image_url": "https://customercare.ncrsilver.com/servlet/rtaImage?eid=ka1d0000001Q9Vx&feoid=00Nd0000006S1UT&refid=0EMd0000001M2Bp",
+        "price": "70.00",
+        "description": "Lorem",
+        "product_type_id": 1
+    },
+    {
+        "id": 1,
+        "name": "NCR Silver Quantum",
+        "image_url": "http://www.idsa.org/sites/default/files/FF-commercial-NCRsilverQuanum.png",
+        "price": "283.00",
+        "description": "72 inches deep and can operate cord free for up to 10 hours. Built in customer facing displays. With NCR \r\nloyalty AND a built-in loyalty scanner you can improve customer retention in no time. Pay Dip, swipe, or tap.",
+        "product_type_id": 1
+    }
+]
