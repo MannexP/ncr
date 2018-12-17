@@ -33,7 +33,7 @@ class BuildSolution extends Component {
 
   handleChange = event => {
     if(event.target.name === 'multiFeatureAnswer'){
-      if(event.target.checked == true){
+      if(event.target.checked === true){
         const expandState = [...this.state.multiFeatureAnswer, event.target.value ]
         this.setState({ multiFeatureAnswer: expandState })
       }else{
@@ -95,6 +95,12 @@ class BuildSolution extends Component {
         />
     case 7:
       return <Success />
+    default:
+      return <Customer 
+      nextStep={this.nextStep} 
+      handleChange = {this.handleChange}
+      values={values}
+      />
     }
 	}
 }
