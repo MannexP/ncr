@@ -16,16 +16,16 @@ class Nav extends Component {
           <div className="Right">
             <div className="Nav">
               <ul className="flexed">
-              <li><Link to='#' className="titles" style={{ textDecoration: 'none', color: '#FFFFFF' }}>ABOUT</Link></li>
-              <li><Link to='#' className="titles" style={{ textDecoration: 'none', color: '#FFFFFF' }}>PRODUCTS</Link></li>
-              <li><Link to='#' className="titles" style={{ textDecoration: 'none', color: '#FFFFFF' }}>BUILD A SOLUTION</Link></li>
-              <li><Link to='#' className="titles" style={{ textDecoration: 'none', color: '#FFFFFF'}}>SUPPORT</Link></li>
+              <li><Link to='/' className="titles" style={{ textDecoration: 'none', color: '#FFFFFF' }}>ABOUT</Link></li>
+              <li><Link to='/products' className="titles" style={{ textDecoration: 'none', color: '#FFFFFF' }}>PRODUCTS</Link></li>
+              <li><Link to='/build-a-solution' className="titles" style={{ textDecoration: 'none', color: '#FFFFFF' }}>BUILD A SOLUTION</Link></li>
+              <li><Link to='/' className="titles" style={{ textDecoration: 'none', color: '#FFFFFF'}}>SUPPORT</Link></li>
               </ul>
             </div>
             <div className="icons">
             <ul className="nav-icons">
-                <li><Link to='/'><img src={cart} alt="cart" height="20px"/></Link></li>
-                <li><Link to='/create-profile'><img src={profile} alt="profile" height="20px"/></Link></li>
+                <li><Link to='/checkout'><img src={cart} alt="cart" height="20px"/></Link></li>
+                <li><Link to='/profile'><img src={profile} alt="profile" height="20px"/></Link></li>
                 <li><Link to='/'><img src={search} alt="search" height="20px"/></Link></li>
               </ul>
             </div>

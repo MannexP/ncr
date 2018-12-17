@@ -1,35 +1,33 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-
-
 const ProfileStyles = styled.div`
 display: grid;
-  grid-template-columns: 20% 80%;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  justify-content: space-between;	
+ grid-template-columns: 20% 80%;
+ grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+ justify-content: space-between;    
 
 .one{
-    display: grid;
-    justify-content: center;  
-  .avatar{
-        img{
-                margin: 0 auto;
-                height: 200px;
-                width: 200px;
-                margin-top: 20px;
-                border-radius:50%;
-        }   
-   }
-}  
+   display: grid;
+   justify-content: center;
+ .avatar{
+       img{
+               margin: 0 auto;
+               height: 200px;
+               width: 200px;
+               margin-top: 20px;
+               border-radius:50%;
+       }
+  }
+}
 `
 
 const FlexContainer = styled.div`
-        display: grid;
-        grid-template-columns: 30% 20% 20% 30%;    
-        border: solid 2px;
-        height: 125px;
-        width: 80%;
+       display: grid;
+       grid-template-columns: 30% 20% 20% 30%;
+       border: solid 2px;
+       height: 125px;
+       width: 80%;
 `
 
 class Profile extends Component {
