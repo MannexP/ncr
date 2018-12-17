@@ -14,7 +14,7 @@ class Login extends Component {
           console.log(res)
           this.setState({ username: res.data.username })
         })
-        // this.props.history.push(`/products`)
+        this.props.history.push(`/products`)
     }
   }
 

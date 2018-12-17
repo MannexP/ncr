@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-
+axios.defaults.xsrfCookieName = 'csrftoken'
+axios.defaults.xsrfHeaderName = 'X-CSRFToken'
 class Signup extends Component {
   state = {
     username: '',
@@ -22,6 +23,7 @@ class Signup extends Component {
           logged_in: true,
           username: res.data.username
         })
+        this.props.history.push(`/products`)
       })
   }
 
