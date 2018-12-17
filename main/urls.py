@@ -1,8 +1,8 @@
 
 from django.urls import path, include
-from . import views
 from rest_framework import routers
 
+from .views import current_user, UserList
 from . import views
 
 router = routers.DefaultRouter()
@@ -19,5 +19,7 @@ router.register('track_package', views.TrackPackageView)
 
 urlpatterns = [
     # url(r'^$', views.FrontendAppView.as_view())
-    path('', include(router.urls))
+    path('', include(router.urls)),
+    path('current_user/', current_user),
+    path('users/', UserList.as_view())
 ]
