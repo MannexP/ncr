@@ -36,3 +36,11 @@ ul li {
 
 .Silver-Logo { grid-area: Silver-Logo; }
 
+ul li{
+  display: inline;
+  margin-right: 10px;
+  float: right;
+}
+.nav-icons {
+  display: inline;
+}

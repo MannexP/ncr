@@ -23,10 +23,10 @@ class Nav extends Component {
               </ul>
             </div>
             <div className="icons">
-            <ul className="flexed">
-                <li><Link to='/'><img src={search} alt="search" height="50px"/></Link></li>
-                <li><Link to='/create-profile'><img src={profile} alt="profile" height="50px"/></Link></li>
-                <li><Link to='/'><img src={cart} alt="cart" height="50px"/></Link></li>
+            <ul className="nav-icons">
+                <li><Link to='/'><img src={cart} alt="cart" height="20px"/></Link></li>
+                <li><Link to='/create-profile'><img src={profile} alt="profile" height="20px"/></Link></li>
+                <li><Link to='/'><img src={search} alt="search" height="20px"/></Link></li>
               </ul>
             </div>
           <div className="Silver-Logo centered">
