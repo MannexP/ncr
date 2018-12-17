@@ -6,7 +6,6 @@ import silverlogo from '../images/logo-large.png';
 import search from '../images/magnifying-glass.png';
 import cart from '../images/shopping-cart.png';
 import profile from '../images/user.png';
-import { Icon } from 'semantic-ui-react';
 class Nav extends Component {
   render() {
     return (

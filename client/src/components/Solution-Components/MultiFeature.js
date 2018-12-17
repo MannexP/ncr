@@ -19,7 +19,6 @@ class MultiFeature extends Component {
     this.props.prevStep();
   }
   onChange = (event) => {
-    console.log(this.props.values)
     this.props.handleChange(event)
   }
   render() {
