@@ -3,51 +3,37 @@ import styled from 'styled-components';
 
 
 
-const ProfileStyles = styled.div
-    `
+const ProfileStyles = styled.div`
 display: grid;
   grid-template-columns: 20% 80%;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   justify-content: space-between;	
-}
-height:1000px;
+
 .one{
     display: grid;
     justify-content: center;  
-    .img{
-        margin-top: 60px;
-        height: 300px;
-        width: 300px;
-        border-radius:200px;
-        background: black;
+  .avatar{
+        img{
+                margin: 0 auto;
+                height: 200px;
+                width: 200px;
+                margin-top: 20px;
+                border-radius:50%;
+        }     
+   }
+  .two{       
+        .rOrders{
+            display: grid;
+            grid-template-columns: 30% 20% 20% 30%;
+            border: solid 2px;
+            height: 125px;
+            width: 80%;
+            margin-left: 200px;
+            margin-top: 150px;
+        }
     }
-}
-  
-
-  .two{
-
-      align-content: center;
-
-      h1{
-          margin-left: 200px;
-       
-      }
-  
-    .rOrders{
-        display: grid;
-        grid-template-columns;
-
-
-        border: solid 2px;
-        height: 125px;
-        width: 80%;
-        margin-left: 200px;
-        margin-top: 150px;
-
-    }
-  }
- 
-
+    
+}  
 `
 
 class Profile extends Component {
@@ -72,8 +58,12 @@ class Profile extends Component {
                     </div>    
                 </div>
                 <div className="three">
+                    {/* <img src="https://img.icons8.com/wired/2x/settings.png" alt="My Orders"></img> */}
                 </div>
                 <div className="four">
+                </div>
+                <div className="five">
+                {/* <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtr0dXjeDRkvXQzOUn2M1tWU1AD4AVQDd38ws1XLV6vBJQ6UOjGg" alt="settings"></img> */}
                 </div>
             </ProfileStyles>
         );

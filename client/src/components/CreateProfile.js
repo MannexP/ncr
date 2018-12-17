@@ -30,7 +30,6 @@ justify-content: center;
 max-width: 300px;
 margin: 10px;
 padding-right: 50px;
-padding:
 border-radius: 8px;
 margin-left: 400px;
 margin-top: 50px;
@@ -41,10 +40,11 @@ border-right: groove;
         font-weight: lighter;
         display:flex;
     }
+}
 `
 const ButtonStyles = styled.div`
 button {
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50; 
     border: none;
     color: white;
     padding: 15px 20px;
@@ -71,11 +71,11 @@ h3{
     align-content: center;
     
 }
+}
 `
 
-
 const Profile = styled.div
-    `
+`
 display:grid;
 grid-template-columns:1fr 1fr;
 
