@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react'
 import axios from 'axios'
-class Login extends React.Component {
+class Login extends Component {
   state = {
     username: '',
     password: '',
@@ -9,15 +9,12 @@ class Login extends React.Component {
 
   componentDidMount() {
     if (this.state.logged_in) {
-      axios.get('/api/current_user/', {
-        headers: {
-          Authorization: `JWT ${localStorage.getItem('token')}`
-        }
-      })
+      axios.get('/api/current_user/')
         .then(res => {
+          console.log(res)
           this.setState({ username: res.data.username })
         })
-        this.props.history.push(`/products`)
+        // this.props.history.push(`/products`)
     }
   }
 
