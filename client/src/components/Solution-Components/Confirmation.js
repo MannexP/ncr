@@ -3,8 +3,8 @@ import { Button, List } from 'semantic-ui-react';
 
 class Confirmation extends Component{
     saveAndContinue = (e) => {
-        e.preventDefault();
-        this.props.nextStep();
+        this.props.history.push('/build-solution')
+
     }
 
     back  = (e) => {

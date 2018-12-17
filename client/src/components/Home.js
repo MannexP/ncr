@@ -11,6 +11,7 @@ import ThankYou from './Checkout-Components/ThankYou';
 import LandingPage from './LandingPage';
 import Login from './Login'
 import Signup from './Signup'
+import SolutionProducts from './Solution-Components/SolutionProducts';
 class Home extends Component {
   render() {
     return (
@@ -26,6 +27,7 @@ class Home extends Component {
                   <Route exact path='/ThankYou' component={ThankYou} />
                   <Route exact path='/login' component={Login} />
                   <Route exact path='/signup' component={Signup} />
+                  <Route exact path='/solution-products' component={SolutionProducts} />
                   <Route path='/' component={LandingPage} />
                 </Switch>
               <Footer />
