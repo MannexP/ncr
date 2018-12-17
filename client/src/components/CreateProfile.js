@@ -42,7 +42,7 @@ border-right: groove;
         font-weight: lighter;
         display:flex;
     }
-
+}`
 const ButtonStyles = styled.div`
 button {
     background-color: #4CAF50;
