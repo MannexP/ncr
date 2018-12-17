@@ -6,7 +6,7 @@ import Success from './Solution-Components/Success';
 import BusinessType from './Solution-Components/BusinessType';
 import Features from './Solution-Components/Features';
 import MultiFeature from './Solution-Components/MultiFeature';
-
+import Solution from './Solution-Components/images/solutionImage.png';
 class BuildSolution extends Component {
 	state = {
 		step: 1,
@@ -49,7 +49,14 @@ class BuildSolution extends Component {
 
   }
 
-  render(){
+  render() {
+  //  FIXME: 
+  //  return (
+  //     <div>
+  //       <img src={Solution} alt="solution image" width="100%" />
+  //     </div>
+  //   );
+  
 	  const {step} = this.state;
 	  const { customerAnswer, businessRunAnswer, businessTypeAnswer, featureAnswer, multiFeatureAnswer } = this.state;
 	  const values = { customerAnswer, businessRunAnswer, businessTypeAnswer, featureAnswer, multiFeatureAnswer };
@@ -96,7 +103,9 @@ class BuildSolution extends Component {
         />
     case 7:
       return <Success />
+    
     }
+   
 	}
 }
 

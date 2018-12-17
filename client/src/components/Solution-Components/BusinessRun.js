@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Form, Icon } from 'semantic-ui-react';
-import styled from 'styled-components'
+import styled from 'styled-components';
+
 
 const SolutionStyles = styled.div`
   display: flex;
@@ -25,7 +26,10 @@ class BusinessType extends Component {
   }
 
 render(){
-    return(
+  return (
+     
+      
+      
       <Form color='green' >
         <SolutionStyles>
           <div>
@@ -46,7 +50,8 @@ render(){
             <Icon onClick={this.next} aria-hidden="true" className="chevron right big"></Icon>
           </div>
         </SolutionStyles>
-      </Form>
+    </Form>
+    
     )
   }
 }
