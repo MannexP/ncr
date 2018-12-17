@@ -32,7 +32,6 @@ justify-content: center;
 max-width: 300px;
 margin: 10px;
 padding-right: 50px;
-padding: 10px;
 border-radius: 8px;
 margin-left: 400px;
 margin-top: 50px;
@@ -43,7 +42,6 @@ border-right: groove;
         font-weight: lighter;
         display:flex;
     }
-}`
 
 const ButtonStyles = styled.div`
 button {
