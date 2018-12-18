@@ -1,7 +1,16 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import 'font-awesome/css/font-awesome.min.css';
-import {Button} from 'reactstrap';
+import { Button } from 'reactstrap';
+import { Link } from 'react-router-dom';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
+
+
+library.add(faTimesCircle)
+
+
 
 class SolutionProducts extends Component {
   state={
@@ -45,11 +54,13 @@ class SolutionProducts extends Component {
       <div>
         <div>
           {this.state.products.map(product => (
-              <div key={product.id}>
+            <div key={product.id}>
+              <img src={product.image_url} alt="" />
               <h1>{product.name}</h1>
               <p>{product.description}</p>
               <h2>price: ${product.price}</h2>
-              <Button color="success" onClick={() => this.handleClick(product)}>Add to cart</Button>
+
+              <Button color="success" onClick={() => this.handleClick(product)} >Add to cart</Button>
               </div>
           ))}
         </div>
@@ -59,7 +70,8 @@ class SolutionProducts extends Component {
               {this.state.cart.length > 0 ?
                 <div>
                   <h4>Shopping cart</h4>
-                  <span>Total $ {this.state.grandTotal}</span>
+                  <Link to='/checkout'><Button color="primary">Checkout: Grand Total ${this.state.grandTotal}</Button></Link>
+                  <span></span>
                 </div>
                 :
                 null
@@ -72,14 +84,14 @@ class SolutionProducts extends Component {
                         <h5>{product.name}</h5>
                       </div>
                       <div className="list-group-item-text row">
-                        <div className='col-xs-12 col-sm-4 col-md-4 col-lg-4 m-b-1'>IMAGE HERE</div>
+                        <div className='col-xs-12 col-sm-4 col-md-4 col-lg-4 m-b-1'><img src={product.image_url} alt="" /></div>
                       </div>
                       <div className='col-xs-12 col-sm-4 col-md-4'>
                         <p>{product.description}</p>
                         <p>price: ${product.price}</p>
                       </div>
                       <div className="col-xs-12 col-sm-4 col-md-4 col-lg-3">
-                        <Button color="success" onClick={() => this.removeClick(product)}>Remove from Cart</Button>
+                        <Button color="danger" onClick={() => this.removeClick(product)}><FontAwesomeIcon className= 'icon' icon={faTimesCircle}/> Remove</Button>
                       </div>
                     </div>
                   </span>
