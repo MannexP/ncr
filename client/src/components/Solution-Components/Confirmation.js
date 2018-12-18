@@ -3,7 +3,6 @@ import { Button, List } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
 class Confirmation extends Component{
-   
     back  = (e) => {
         e.preventDefault();
         this.props.prevStep();
