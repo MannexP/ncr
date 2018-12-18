@@ -5,7 +5,8 @@ import quantum from './images/quantum.png';
 import features from './images/feaatures.png';
 import wifi from './images/wifi.png';
 import bundles from './images/bundles.png';
-import lighting from './images/lighting.png';
+
+import bundles3 from './images/bundles3.png';
 import customers from './images/customers.png';
 import smarts from './images/smarts.png';
 import solution from './images/solutionbuild.png';
@@ -28,8 +29,9 @@ class TopPic extends Component {
                 </video>
       
                 <img src={wifi} alt="top pic" width="100%"/>
-                <img src={bundles} alt="top pic" width="100%"/>
-                <img src={lighting} alt="top pic"/>
+                <img src={bundles} alt="top pic" />
+                
+                <img src={bundles3} alt="top pic"/>
                 <img src={customers} alt="top pic"/>
                 <img src={smarts} alt="top pic"/>
                 <Link to='/build-a-solution'><img src={solution} alt="top pic" width="100%"/></Link>
