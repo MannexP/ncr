@@ -104,7 +104,7 @@ class VerticalLinearStepper extends React.Component {
       
       <div className={classes.root}>
         <div className="flexed">
-        <div style={{borderRight: 1+'px solid black', paddingRight: 20 +'px', marginTop: 5+'%'}}>
+        <div style={{borderRight: 1+'px solid lightgray', paddingRight: 20 +'px', marginTop: 1+'%'}}>
           <QuickPay />
           <Stepper activeStep={activeStep} orientation="vertical">
             {steps.map((label, index) => {
