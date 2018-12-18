@@ -5,9 +5,6 @@ import styled from "styled-components";
 const ShoppingCartStyle = styled.div`
 	.thumbnail{
 		height:100px;
-    border: 1px solid gray;
-    border-radius: 10px;
-    padding: 20px 10px; 
 	}
   .flexed2{
     display: flex;
@@ -39,7 +36,7 @@ state = {
   }
   render() {
     return (
-      <div>
+      <ShoppingCartStyle>
       {this.state.cart.map(product => (
           <div className="list-group" key={product.id}>
           <span>
@@ -48,7 +45,7 @@ state = {
                 <h5>{product.name}</h5>
               </div>
               <div className="list-group-item-text row">
-                <div className='col-xs-12 col-sm-4 col-md-4 col-lg-4 m-b-1'>IMAGE HERE</div>
+                <div className='col-xs-12 col-sm-4 col-md-4 col-lg-4 m-b-1'><img className="thumbnail" src={product.image_url} /></div>
               </div>
               <div className='col-xs-12 col-sm-4 col-md-4'>
                 <p>{product.description}</p>
@@ -61,7 +58,7 @@ state = {
           </span>
         </div>
         ))}
-    </div>
+    </ShoppingCartStyle>
     );
   }
 }
