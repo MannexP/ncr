@@ -90,41 +90,6 @@ class Customer extends Component {
           </Form>
         </div>
       </BuildSolutionStyle>
-
-      //  <BuildSolutionStyle>
-      //  <Form color='green' >
-      //  <img src={Solution} alt="solution image" width="100%" />
-      //  <Header>
-      //    <h1>Build Your Solution</h1>
-      //  </Header>
-      //  <SubHeader>
-      //    <h3>Answer a few short questions to help us determine the best solution for your business.</h3>
-      //  </SubHeader>
-      //    <SolutionStyles>
-      //    <div className="grouped fields">
-      //      <h3>Are you an existing customer?</h3>
-      //      <div className="field">
-      //          <input onClick={this.onChange} type="radio" name="customerAnswer" value="Yes" />
-      //          {/* <img class="image" src={yes} /> */}
-
-      //        <label> Yes</label>
-      //        <input onClick={this.onChange} type="radio" name="customerAnswer" value="No" />
-      //        <label> No</label>
-      //      </div>
-      //    </div>
-      //      <div>
-      //        <Icon onClick={this.next} aria-hidden="true" className="chevron right big"></Icon>
-      //      </div>
-      //    </SolutionStyles>
-      //  </Form>
-      //  </BuildSolutionStyle>
-
-
-
-
-
-
-
     );
   }
 }

@@ -109,6 +109,25 @@ img{
     width: 100px;
 }
 `
+const FlexContainer3 = styled.div`
+       display: grid;
+       grid-template-columns: 40% 20% 20% 20%;
+       border: solid 5px;
+       border-style: groove;
+       height: 110px;
+       width: 100;
+       padding: 20px;
+       h5{
+           font-weight: lighter;     
+       }
+       `
+const POpadding = styled.div`
+margin-top: 50px;
+
+`
+
+
+
 
 
 
@@ -203,6 +222,40 @@ class Profile extends Component {
                             </FlexContainer2>
                         </div>
                     </div>
+                </div>
+                <div className="seven">
+                </div>
+                <div className="eight"> 
+                    <div className='container'>
+                        <POpadding>
+                            <h2>Past Orders</h2>
+                        </POpadding>
+                        <FlexContainer3>
+                            <div className="orderDelivered"><h5>Order Delivered</h5>{"\n"}
+                                <h6>December 10,2018</h6>
+                            </div>
+                            <div className="total"><h5>Total</h5>{"\n"}
+                                <h6>$1,678.00</h6>
+                            </div>
+                            <div className="orderNumber"><h5>Order Number</h5>{"\n"}
+                                <h6>000-045</h6>
+                            </div>
+                            <div className="orderDetails">
+                                <ButtonStyles>
+                                    <button type="submit">Track Package</button>
+                                </ButtonStyles>
+                            </div>
+                        </FlexContainer3>
+                    </div>
+                    <div className="nine">
+                    </div>
+                    <div className="ten">
+                        {/* <FlexContainer4>
+
+
+                    </FlexContainer4> */}
+                    </div>
+
                 </div>
             </ProfileStyles>
         );
