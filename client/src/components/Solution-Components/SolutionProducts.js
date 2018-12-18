@@ -44,16 +44,40 @@ class SolutionProducts extends Component {
           ))}
         </div>
         <div>
-        {this.state.cart.map(product => (
-            <div key={product.id}>
-            <h1>{product.name}</h1>
-            <p>{product.description}</p>
-            <h2>price: ${product.price}</h2>
-            <Button color="success" onClick={() => this.removeClick(product)}>Remove from Cart</Button>
+          <div className="row m-t-1">
+            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              {this.state.cart.length > 0 ?
+                <h4>Shopping cart</h4>
+                :
+                null
+              }
+              {this.state.cart.map(cart => (
+                <div className="list-group" key={cart.product.id}>
+                  <span>
+                    <div className="list-group-item list-group-item-action">
+                      <div>
+                        <h5>{cart.product.name}</h5>
+                      </div>
+                      <div className="list-group-item-text row">
+                        <div className='col-xs-12 col-sm-4 col-md-4 col-lg-4 m-b-1'>IMAGE HERE</div>
+                      </div>
+                      <div className='col-xs-12 col-sm-4 col-md-4'>
+                        <span>Quantity: </span><input onChange={this.handleChange} type='number' value={cart.qty}/>
+                        <p>{cart.product.description}</p>
+                        <p>price: ${cart.product.price}</p>
+                        <p>Total: ${cart.qty*cart.product.price}</p>
+                      </div>
+                      <div className="col-xs-12 col-sm-4 col-md-4 col-lg-3">
+                        <Button color="success" onClick={() => this.removeClick(cart.product, cart.qty)}>Remove from Cart</Button>
+                      </div>
+                    </div>
+                  </span>
+                </div>
+              ))}
             </div>
-        ))}
+          </div>
+        </div>
       </div>
-    </div>
     );
   }
 }
