@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
 import { Form, Icon } from 'semantic-ui-react';
 import styled from 'styled-components'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUtensils } from '@fortawesome/free-solid-svg-icons'
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+
+
+library.add(faUtensils)
+library.add(faShoppingCart)
 
 const SolutionStyles = styled.div`
   display: flex;
@@ -31,10 +39,24 @@ class BusinessType extends Component {
         <div className="grouped fields">
           <label>What type of business are you?</label>
           <div className="field">
-          <input onClick={this.onChange} type="radio" name="businessTypeAnswer" value="Full Service Resturant" />
-            <label>Full Service Resturant</label>
-            <input onClick={this.onChange} type="radio" name="businessTypeAnswer" value="Retail" />
-            <label>Retail</label>
+         
+              <div className="pretty p-icon p-plain p-tada">
+                <input onClick={this.onChange} type="radio" name="businessTypeAnswer" value="Full Service Resturant"/>
+                <div className="state p-primary-o">
+                  
+                  <FontAwesomeIcon className= 'icon' icon={faUtensils} style={{ color: 'black'}}/>
+                  <label>Full Service Restaurant</label>
+                </div>
+              </div>
+          
+              <div className="pretty p-icon p-plain p-tada">
+                <input onClick={this.onChange} type="radio" name="businessTypeAnswer" value="Retail"/>
+                <div className="state p-primary-o">
+                  
+                  <FontAwesomeIcon className= 'icon' icon={faShoppingCart} style={{ color: 'black'}}/>
+                  <label>Retail</label>
+                </div>
+              </div>
             <input onClick={this.onChange} type="radio" name="businessTypeAnswer" value="Service" />
             <label> Service</label>
             <input onClick={this.onChange} type="radio" name="businessTypeAnswer" value="Cafe or Food Truck" />
