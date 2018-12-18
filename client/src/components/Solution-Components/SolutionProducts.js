@@ -6,7 +6,8 @@ import {Button} from 'reactstrap';
 class SolutionProducts extends Component {
   state={
     products: [],
-    cart: []
+    cart: [],
+    grandTotal: 0
   }
   componentDidMount() {
     axios.get(`/api/product/`).then(res =>{
