@@ -6,6 +6,9 @@ display: grid;
  grid-template-columns: 20% 80%;
  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
  justify-content: space-between;    
+ h6{
+    font-weight: bold;
+}
 
 .one{
    display: grid;
@@ -19,6 +22,7 @@ display: grid;
                border-radius:50%;
        }
   }
+
 
 }
 `
@@ -43,12 +47,11 @@ const FlexContainer2 = styled.div`
        border-bottom-style: groove;
        h5{
            font-weight: lighter;
-       }
+       }     
        span{
            color:green;
            font-weight: bold;
-       }
-       
+       }       
        height: 200px;
        width: 100%;
        padding: 10px;
@@ -79,6 +82,7 @@ const ImageWrapper = styled.div`
 display: grid;
 justify-content: center;
 img{
+    margin: 0 auto;
     border: solid 3px;
     border-radius:50%;
     height: 100px;
@@ -89,6 +93,7 @@ const ImageWrapper1 = styled.div`
 display: grid;
 justify-content: center;
 img{
+    margin: 0 auto;
     padding:2px;
     margin-top: 50px;
     border: solid 3px;
@@ -112,17 +117,25 @@ class Profile extends Component {
                             <h2>Recent Orders</h2>
                         </ROpadding>
                         <FlexContainer>
-                            <div className="orderPlaced"><h5>Order Placed</h5></div>
-                            <div className="total"><h5>Total</h5></div>
-                            <div className="shipping"><h5>Shipping To</h5></div>
-                            <div className="orderNumber"><h5>Order Number</h5></div>
+                            <div className="orderPlaced"><h5>Order Place</h5>{"\n"}
+                                <h6>December 20,2018</h6>
+                            </div>
+                            <div className="total"><h5>Total</h5>{"\n"}
+                            <h6>$1,678.00</h6>
+                            </div>
+                            <div className="shipping"><h5>Shipping To</h5>{"\n"}
+                            <h6>Jamie King</h6>
+                            </div>
+                            <div className="orderNumber"><h5>Order Number</h5>{"\n"}
+                            <h6>000-445</h6>
+                            </div>
                         </FlexContainer>
                     </div>
                 </div>
                 <div className="three">
                     <ImageWrapper1>
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz4k7ySWXn8hTb7DmvwyvxetkqLN0yhEHiFBs23x4nEnDiY5I43Q" alt="My Orders"></img>
-                      
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz4k7ySWXn8hTb7DmvwyvxetkqLN0yhEHiFBs23x4nEnDiY5I43Q" alt="My Orders"></img>{"\n"}
+                        <h5>My Orders</h5>
                     </ImageWrapper1>
                 </div>
                 <div className="four">
@@ -146,7 +159,8 @@ class Profile extends Component {
                 </div>
                 <div className="five">
                     <ImageWrapper>
-                         <img src="https://img.icons8.com/wired/2x/settings.png" alt="My Orders"></img>
+                        <img src="https://img.icons8.com/wired/2x/settings.png" alt="My Orders"></img>{"\n"}
+                        <h5>Account Settings</h5>
                     </ImageWrapper>
                 </div>
                 <div className="six">
