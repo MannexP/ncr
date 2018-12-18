@@ -18,6 +18,7 @@ import classNames from 'classnames';
 import axios from 'axios';
 import ShoppingCartProducts from './Checkout-Components/ShoppingCartProducts';
 
+
 const styles = theme => ({
   root: {
     width: '90%',
@@ -144,7 +145,8 @@ class VerticalLinearStepper extends React.Component {
             </Button>
           </Paper>
         )}
-      </div>
+        </div>
+        
     );
   }
 }

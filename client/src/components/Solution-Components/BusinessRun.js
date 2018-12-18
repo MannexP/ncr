@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import { Form, Icon } from 'semantic-ui-react';
 import styled from 'styled-components';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStore } from '@fortawesome/free-solid-svg-icons'
+
+
+library.add(faStore)
 
 
 const SolutionStyles = styled.div`
@@ -38,12 +44,33 @@ render(){
           <div className="grouped fields">
             <label>What kind of business do you run?</label>
             <div className="field">
-              <input onClick={this.onChange} type="radio" name="businessRunAnswer" value="Single Location" />
-              <label> Single Location</label>
-              <input onClick={this.onChange} type="radio" name="businessRunAnswer" value="Multi Locaiton" />
-              <label> Multi Locaiton</label>
-              <input onClick={this.onChange} type="radio" name="businessRunAnswer" value="Franchise" />
-              <label> Franchise</label>
+      
+            <div className="pretty p-icon p-plain p-tada">
+                <input type="radio" onClick={this.onChange} name="businessRunAnswer" value="Single Location"/>
+                <div className="state p-primary-o">
+                  
+                  <FontAwesomeIcon className= 'icon' icon={faStore} style={{ color: 'green'}}/>
+                  <label>Single Location</label>
+                </div>
+              </div>
+    
+              <div className="pretty p-icon p-plain p-tada">
+                <input type="radio" onClick={this.onChange} name="businessRunAnswer" value="Multi Locaiton"/>
+                <div className="state p-primary-o">
+                  
+                  <FontAwesomeIcon className= 'icon' icon={faStore} style={{ color: 'green'}}/>
+                  <label>Multi-Location</label>
+                </div>
+              </div>
+              
+            <div className="pretty p-icon p-plain p-tada">
+                <input type="radio" onClick={this.onChange} name="businessRunAnswer" value="Franchise"/>
+                <div className="state p-primary-o">
+                  
+                  <FontAwesomeIcon className= 'icon' icon={faStore} style={{ color: 'green'}}/>
+                  <label>Franchise</label>
+                </div>
+              </div>
             </div>
           </div>
           <div>
