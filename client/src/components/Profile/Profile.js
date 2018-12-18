@@ -22,7 +22,6 @@ display: grid;
 
 }
 `
-
 const FlexContainer = styled.div`
        display: grid;
        grid-template-columns: 30% 20% 20% 30%;
@@ -32,12 +31,9 @@ const FlexContainer = styled.div`
        width: 100%;
        padding: 10px;
        h5{
-           font-weight: lighter;
-        
+           font-weight: lighter;     
        }
        `
-
-
 const FlexContainer2 = styled.div`
        display: grid;
        grid-template-columns: 30% 30% 30%;
@@ -59,7 +55,7 @@ const FlexContainer2 = styled.div`
 `
 const ButtonStyles = styled.div`
 button {
-    background-color: #0000FF;
+    background-color: #31A9E0;
     border: none;
     color: white;
     padding: 15px 20px;
@@ -101,8 +97,6 @@ img{
     width: 100px;
 }
 `
-
-
 class Profile extends Component {
     render() {
         return (
