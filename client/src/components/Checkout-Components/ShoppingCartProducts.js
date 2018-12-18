@@ -1,6 +1,19 @@
 import React, { Component } from 'react';
 import {Button} from 'reactstrap';
+import styled from "styled-components";
 
+const ShoppingCartStyle = styled.div`
+	.thumbnail{
+		height:100px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 20px 10px; 
+	}
+  .flexed2{
+    display: flex;
+    justify-content: space-evenly;
+  }
+`
 
 class ShoppingCartProducts extends Component {
 state = {
@@ -19,6 +32,9 @@ state = {
       return newTotal += parseFloat(product.price)
     })
     this.setState({ cart: filtered, grandTotal: newTotal  })
+    if(filtered.length === 0){
+      this.props.history.push('/solution-products')
+    }
     localStorage.setItem('shopping-cart', JSON.stringify(filtered))
   }
   render() {
