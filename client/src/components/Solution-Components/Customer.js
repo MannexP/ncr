@@ -54,7 +54,7 @@ class Customer extends Component {
                 </div>
               </div>
            
-              <div className="field">
+            
       
 
                 
@@ -70,7 +70,7 @@ class Customer extends Component {
        
 
               </div>
-            </div>
+            
             <div>
               <Icon
                 onClick={this.next}
