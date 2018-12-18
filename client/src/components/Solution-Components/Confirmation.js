@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import { Button, List } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 
 class Confirmation extends Component{
-    saveAndContinue = (e) => {
-        this.props.history.push('/build-solution')
-
-    }
-
+   
     back  = (e) => {
         e.preventDefault();
         this.props.prevStep();
@@ -38,7 +35,7 @@ class Confirmation extends Component{
                 </List>
 
                 <Button onClick={this.back}>Back</Button>
-                <Button onClick={this.saveAndContinue}>View Suggestions</Button>
+                <Link to='/solution-products'><Button>View Suggestions</Button></Link>
             </div>
         )
     }
