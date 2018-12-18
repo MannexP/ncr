@@ -43,7 +43,7 @@ class Customer extends Component {
           <SolutionStyles>
             <div className="grouped fields">
               <label>Are you an existing customer?</label>
-             
+              <br />
               <div className="pretty p-icon p-plain p-tada">
                 <input type="radio" name="customerAnswer"
                   value="Yes" onClick={this.onChange}/>

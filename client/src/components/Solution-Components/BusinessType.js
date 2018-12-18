@@ -5,10 +5,14 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUtensils } from '@fortawesome/free-solid-svg-icons'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import { faCut } from '@fortawesome/free-solid-svg-icons'
+import { faMugHot } from '@fortawesome/free-solid-svg-icons'
 
 
 library.add(faUtensils)
 library.add(faShoppingCart)
+library.add(faCut)
+library.add(faMugHot)
 
 const SolutionStyles = styled.div`
   display: flex;
@@ -57,10 +61,24 @@ class BusinessType extends Component {
                   <label>Retail</label>
                 </div>
               </div>
-            <input onClick={this.onChange} type="radio" name="businessTypeAnswer" value="Service" />
-            <label> Service</label>
-            <input onClick={this.onChange} type="radio" name="businessTypeAnswer" value="Cafe or Food Truck" />
-            <label>Cafe or Food Truck</label>
+           
+              <div className="pretty p-icon p-plain p-tada">
+                <input onClick={this.onChange} type="radio" name="businessTypeAnswer" value="Service" />
+                <div className="state p-primary-o">
+                  
+                  <FontAwesomeIcon className= 'icon' icon={faCut} style={{ color: 'black'}}/>
+                  <label>Service</label>
+                </div>
+              </div>
+            
+              <div className="pretty p-icon p-plain p-tada">
+                <input onClick={this.onChange} type="radio" name="businessTypeAnswer" value="Cafe or Food Truck"/>
+                <div className="state p-primary-o">
+                  
+                  <FontAwesomeIcon className= 'icon' icon={faMugHot} style={{ color: 'black'}}/>
+                  <label>Cafe or Food Truck</label>
+                </div>
+              </div>
           </div>
         </div>
           <div>
