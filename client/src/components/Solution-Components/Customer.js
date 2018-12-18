@@ -35,6 +35,9 @@ const Choices = styled.div`
 display: flex;
 justify-content: center;
 `
+const IconStyles = styled.div`
+margin-top: 43px;
+`
 
 class Customer extends Component {
   next = e => {
@@ -88,11 +91,14 @@ class Customer extends Component {
               </div>
 
               <div>
-                <Icon
-                  onClick={this.next}
-                  aria-hidden="true"
-                  className="chevron right big"
-                />
+                <IconStyles>
+                  <Icon
+                    onClick={this.next}
+                    aria-hidden="true"
+                    className="chevron right big"
+                  />
+                </IconStyles>
+                
               </div>
             </SolutionStyles>
           </Form>
