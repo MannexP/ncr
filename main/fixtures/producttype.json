@@ -1,0 +1,29 @@
+[
+    {
+      "model": "main.product_type",
+      "fk": 1,
+      "fields": {
+        "name": "Hardware"
+      },
+      {
+      "model": "main.product_type",
+      "fk": 1,
+      "fields": {
+        "name": "Hardware"
+      },
+      {
+        "model": "main.product_type",
+        "fk": 1,
+        "fields": {
+            "name": "Hardware"
+        },
+        {
+            "model": "main.prodcut_type",
+            "fk": 1,
+            "fields": {
+                "name": "Hardware"
+            }
+        }
+  ]
+  
+  

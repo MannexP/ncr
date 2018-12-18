@@ -7,6 +7,7 @@ import search from '../images/magnifying-glass.png';
 import cart from '../images/shopping-cart.png';
 import profile from '../images/user.png';
 class Nav extends Component {
+ 
   render() {
     return (
         <div className="grid-container">
@@ -16,10 +17,10 @@ class Nav extends Component {
           <div className="Right">
             <div className="Nav">
               <ul className="flexed">
-              <li><Link to='/' className="titles" style={{ textDecoration: 'none', color: '#FFFFFF' }}>ABOUT</Link></li>
-              <li><Link to='/products' className="titles" style={{ textDecoration: 'none', color: '#FFFFFF' }}>PRODUCTS</Link></li>
-              <li><Link to='/build-a-solution' className="titles" style={{ textDecoration: 'none', color: '#FFFFFF' }}>BUILD A SOLUTION</Link></li>
-              <li><Link to='/' className="titles" style={{ textDecoration: 'none', color: '#FFFFFF'}}>SUPPORT</Link></li>
+              <li><Link to='/' className="titles"  onClick={this.handleClick } name='about' style={{color: '#FFFFFF' }}>ABOUT</Link></li>
+              <li><Link to='/products' className="titles" style={{color: '#FFFFFF' }}>PRODUCTS</Link></li>
+              <li><Link to='/build-a-solution' className="titles" style={{color: '#FFFFFF' }}>BUILD A SOLUTION</Link></li>
+              <li><Link to='/' className="titles" style={{color: '#FFFFFF'}}>SUPPORT</Link></li>
               </ul>
             </div>
             <div className="icons">
