@@ -18,20 +18,11 @@ display: grid;
             height: 200px;
             width: 200px;
             margin-top: 20px;
-         
+            border-radius: 50%;     
        }
   }
 }
-.status{ 
-    img{
-        border: solid 1px;
-        border-radius: 10% ;
-        border-style: groove;
-        height: 150px;
-        width: 150px;
-        background: color; 
-    }
-}
+
 `
 const FlexContainer = styled.div`
        display: grid;
@@ -59,17 +50,16 @@ const FlexContainer2 = styled.div`
            color:green;
            font-weight: bold;
        }       
-       height: 200px;
+       height: 225px;
        width: 100%;
        padding: 10px;
     .status{ 
         img{
-            border: solid 1px;
-            border-radius: 10% ;
-            border-style: groove;
+            border: solid .75px #DBDADA;
+            border-radius: 5%;
             height: 150px;
             width: 150px;
-            background: color; 
+            
         }
     }   
 `
