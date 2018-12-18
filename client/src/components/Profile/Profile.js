@@ -87,10 +87,19 @@ img{
     border-radius:50%;
     height: 100px;
     width: 100px;
-
 }
-   
-
+`
+const ImageWrapper1 = styled.div`
+display: grid;
+justify-content: center;
+img{
+    padding:2px;
+    margin-top: 50px;
+    border: solid 3px;
+    border-radius:50%;
+    height: 100px;
+    width: 100px;
+}
 `
 
 
@@ -117,9 +126,10 @@ class Profile extends Component {
                     </div>
                 </div>
                 <div className="three">
-                    {/* <ImageWrapper>
-                        <img src="https://img.icons8.com/wired/2x/settings.png" alt="My Orders"></img>
-                    </ImageWrapper> */}
+                    <ImageWrapper1>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz4k7ySWXn8hTb7DmvwyvxetkqLN0yhEHiFBs23x4nEnDiY5I43Q" alt="My Orders"></img>
+                      
+                    </ImageWrapper1>
                 </div>
                 <div className="four">
                     <div className='container'>
@@ -142,7 +152,7 @@ class Profile extends Component {
                 </div>
                 <div className="five">
                     <ImageWrapper>
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtr0dXjeDRkvXQzOUn2M1tWU1AD4AVQDd38ws1XLV6vBJQ6UOjGg" alt="settings"></img>
+                         <img src="https://img.icons8.com/wired/2x/settings.png" alt="My Orders"></img>
                     </ImageWrapper>
                 </div>
                 <div className="six">
