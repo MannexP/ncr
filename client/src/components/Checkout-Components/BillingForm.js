@@ -36,8 +36,9 @@ const styles = theme => ({
 
 class OutlinedTextFields extends React.Component {
 	state = {
-		name: 'Cat in the Hat',
-		age: '',
+		name: '',
+    cvv: '',
+    cardNumber: '',
 		multiline: 'Controlled',
 		currency: 'EUR',
 	};
@@ -64,8 +65,8 @@ class OutlinedTextFields extends React.Component {
 						<TextField required
 							id="outlined-number"
 							label="Card Number"
-							value={this.state.age}
-							onChange={this.handleChange('age')}
+							value={this.state.cardNumber}
+							onChange={this.handleChange('cardNumber')}
 							type="number"
 							className={classes.textField}
 							InputLabelProps={{
@@ -79,7 +80,9 @@ class OutlinedTextFields extends React.Component {
 						<div>
 						<TextField required
 							id="outlined-with-placeholder"
-							label="Name On Card"
+              label="Name On Card"
+              value={this.state.name}
+							onChange={this.handleChange('name')}
 							placeholder="Full Name"
 							className={classes.textField}
 							margin="normal"
@@ -91,7 +94,7 @@ class OutlinedTextFields extends React.Component {
 								id="date"
 								label="Expiration Date"
 								type="date"
-								defaultValue="2017-05-24"
+								defaultValue="2018-12-19"
 								className={classes.textField}
 								InputLabelProps={{
 									shrink: true,
@@ -103,8 +106,8 @@ class OutlinedTextFields extends React.Component {
 							<TextField required
 								id="outlined-number"
 								label="CVV"
-								value={this.state.age}
-								onChange={this.handleChange('age')}
+								value={this.state.cvv}
+								onChange={this.handleChange('cvv')}
 								type="number"
 								className={classes.textField}
 								InputLabelProps={{
@@ -131,7 +134,6 @@ class OutlinedTextFields extends React.Component {
 								label="Billing address is same as shipping"
 								labelPlacement="end"
 									/> 
-
 						</RadioGroup>
 						</FormControl>
 						</form>
