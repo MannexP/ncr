@@ -31,6 +31,10 @@ display: flex;
 justify-content: center;
 margin-top: 10px;
 `
+const Choices = styled.div`
+display: flex;
+justify-content: center;
+`
 
 class Customer extends Component {
   next = e => {
@@ -58,11 +62,12 @@ class Customer extends Component {
               <div className="grouped fields">
                 <h3>Are you an existing customer?</h3>
                 <br />
+                <Choices>
                 <div className="pretty p-icon p-plain p-tada">
                   <input type="radio" name="customerAnswer"
                     value="Yes" onClick={this.onChange} />
                   <div className="state p-primary-o">
-
+                 
                     <FontAwesomeIcon className='icon' icon={faCheckCircle} style={{ color: 'green' }} />
                     <label>Yes</label>
                   </div>
@@ -76,6 +81,9 @@ class Customer extends Component {
                     <label>No</label>
                   </div>
                 </div>
+                    
+                    </Choices>
+                
 
               </div>
 
