@@ -31,16 +31,11 @@ const styles = theme => ({
 	},
 });
 
-
-
-
 class OutlinedTextFields extends React.Component {
 	state = {
 		name: '',
     cvv: '',
-    cardNumber: '',
-		multiline: 'Controlled',
-		currency: 'EUR',
+    cardNumber: ''
 	};
 
 	handleChange = name => event => {
@@ -55,12 +50,14 @@ class OutlinedTextFields extends React.Component {
 			return (
 				<div>
 				<div>Card Type*</div>
+        <div>
 				<img src={visa} alt="visa" height="50px"/>
 				<img src={mastercard} alt="visa" height="50px"/>
 				<img src={amex} alt="visa" height="50px"/>
 				<img src={discover} alt="visa" height="50px"/>
+        </div>
 				<div>
-					<form className={classes.container} noValidate autoComplete="off">
+					<form className={classes.container} style={{display: 'flex', flexDirection:'column'}} noValidate autoComplete="off">
 						<div>
 						<TextField required
 							id="outlined-number"
@@ -118,7 +115,7 @@ class OutlinedTextFields extends React.Component {
 
 							/>
 							</div>
-							<FormControl component="fieldset">
+							{/* <FormControl component="fieldset">
 								<FormLabel component="legend"></FormLabel>
 								<RadioGroup
 									aria-label="position"
@@ -135,7 +132,7 @@ class OutlinedTextFields extends React.Component {
 								labelPlacement="end"
 									/> 
 						</RadioGroup>
-						</FormControl>
+						</FormControl> */}
 						</form>
 						</div>
 				</div>
