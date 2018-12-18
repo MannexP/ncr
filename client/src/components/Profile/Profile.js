@@ -154,7 +154,10 @@ class Profile extends Component {
                             <div className="status"><h5>Status:<span>Shipped</span></h5>
                                 <img src="https://www.ncr.com/content/dam/ncrcom/restaurants/XR7-Aloha-no-background.png"></img>
                             </div>
-                            <div className="Item"><h5>Item 1 of 2</h5></div>
+                            <div className="Item"><h5>Item 1 of 2</h5>{"\n"}
+                                <h4>NCR Real POS</h4>{"\n"}
+                                <p>#000-455</p>
+                            </div>
                             <div className="Expected Delivery">
                                 <Padding>
                                     <h5>Expected Delivery: Dec 19</h5>
@@ -182,7 +185,10 @@ class Profile extends Component {
                                 <div className="status"><h5>Status:<span>Shipped</span></h5>
                                     <img src="https://www.i3pointofsale.com/wp-content/uploads/2017/12/NCR-Silver-2-front_angle.png"></img>
                                 </div>
-                                <div className="Item"><h5>Item 2 of 2</h5></div>
+                                <div className="Item"><h5>Item 2 of 2</h5>{"\n"}
+                                    <h4>NCR Silver Quantum</h4>{"\n"}
+                                    <p>#000-455</p>
+                                </div>
                                 <div className="Expected Delivery">
                                     <Padding>
                                         <h5>Expected Delivery: Dec 19</h5>
