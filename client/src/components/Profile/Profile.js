@@ -9,21 +9,28 @@ display: grid;
  h6{
     font-weight: bold;
 }
-
 .one{
    display: grid;
    justify-content: center;
  .avatar{
        img{
-               margin: 0 auto;
-               height: 200px;
-               width: 200px;
-               margin-top: 20px;
-               border-radius:50%;
+            margin: 0 auto;
+            height: 200px;
+            width: 200px;
+            margin-top: 20px;
+         
        }
   }
-
-
+}
+.status{ 
+    img{
+        border: solid 1px;
+        border-radius: 10% ;
+        border-style: groove;
+        height: 150px;
+        width: 150px;
+        background: color; 
+    }
 }
 `
 const FlexContainer = styled.div`
@@ -55,6 +62,16 @@ const FlexContainer2 = styled.div`
        height: 200px;
        width: 100%;
        padding: 10px;
+    .status{ 
+        img{
+            border: solid 1px;
+            border-radius: 10% ;
+            border-style: groove;
+            height: 150px;
+            width: 150px;
+            background: color; 
+        }
+    }   
 `
 const ButtonStyles = styled.div`
 button {
@@ -102,6 +119,9 @@ img{
     width: 100px;
 }
 `
+
+
+
 class Profile extends Component {
     render() {
         return (
@@ -121,13 +141,13 @@ class Profile extends Component {
                                 <h6>December 20,2018</h6>
                             </div>
                             <div className="total"><h5>Total</h5>{"\n"}
-                            <h6>$1,678.00</h6>
+                                <h6>$1,678.00</h6>
                             </div>
                             <div className="shipping"><h5>Shipping To</h5>{"\n"}
-                            <h6>Jamie King</h6>
+                                <h6>Jamie King</h6>
                             </div>
                             <div className="orderNumber"><h5>Order Number</h5>{"\n"}
-                            <h6>000-445</h6>
+                                <h6>000-445</h6>
                             </div>
                         </FlexContainer>
                     </div>
@@ -141,7 +161,9 @@ class Profile extends Component {
                 <div className="four">
                     <div className='container'>
                         <FlexContainer2>
-                            <div className="Status"><h5>Status:<span>Shipped</span></h5></div>
+                            <div className="status"><h5>Status:<span>Shipped</span></h5>
+                                <img src="https://www.ncr.com/content/dam/ncrcom/restaurants/XR7-Aloha-no-background.png"></img>
+                            </div>
                             <div className="Item"><h5>Item 1 of 2</h5></div>
                             <div className="Expected Delivery">
                                 <Padding>
@@ -167,7 +189,9 @@ class Profile extends Component {
                     <div className='container'>
                         <div className="two">
                             <FlexContainer2>
-                                <div className="Status"><h5>Status:<span>Shipped</span></h5></div>
+                                <div className="status"><h5>Status:<span>Shipped</span></h5>
+                                    <img src="https://www.i3pointofsale.com/wp-content/uploads/2017/12/NCR-Silver-2-front_angle.png"></img>
+                                </div>
                                 <div className="Item"><h5>Item 2 of 2</h5></div>
                                 <div className="Expected Delivery">
                                     <Padding>
