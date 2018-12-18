@@ -99,9 +99,9 @@ class VerticalLinearStepper extends React.Component {
     const { classes } = this.props;
     const steps = getSteps();
     const { activeStep } = this.state;
-
+    const props = {...this.props}
+    console.log(props)
     return (
-      
       <div className={classes.root}>
         <div className="flexed">
         <div style={{borderRight: 1+'px solid lightgray', paddingRight: 20 +'px', marginTop: 1+'%'}}>
@@ -147,7 +147,7 @@ class VerticalLinearStepper extends React.Component {
             </Paper>
           )}
         </div>
-          <ShoppingCartProducts />
+          <ShoppingCartProducts history={props.history} />
         </div>
       </div>
     );
