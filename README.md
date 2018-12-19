@@ -74,4 +74,5 @@ Table of Contents
 #### Shout Outs!
 
 <a href="#top">Back to top</a> 
+<br>
 <a href="#live-site">Live Site</a>
