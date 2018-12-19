@@ -18,6 +18,7 @@ const SolutionStyles = styled.div`
 `
 const FeatureStyles = styled.div`
 height: 1000px;
+font-family: 'Raleway', sans-serif;
 `
 
 const Header = styled.div`

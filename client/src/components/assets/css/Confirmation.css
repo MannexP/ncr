@@ -1,0 +1,11 @@
+.changeHeight {
+    height: 73vh;
+    display: flex;
+    justify-content: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+#confirm {
+    margin-top: 50px;
+}

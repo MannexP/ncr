@@ -23,6 +23,7 @@ library.add(faMinusSquare)
 const Straight = styled.div`
 display: flex;
 justify-content: space-around;
+font-family: 'Raleway', sans-serif;
 
 margin-top: 20px;
 .check{
@@ -35,6 +36,10 @@ const CartStyle = styled.div`
     display: flex;
     flex-direction: row;
   }
+`
+
+const Price = styled.div`
+font-family: 'Open Sans', sans-serif;
 `
 class SolutionProducts extends Component {
 	state={
@@ -162,12 +167,15 @@ class SolutionProducts extends Component {
 								<div className="check"><img src={logo} alt="icon" height="20px" /><h4>NCR Console Core</h4></div>
 								<div className="check"><img src={logo} alt="icon" height="20px" /><h4>ipad Air</h4></div>
 								<div className="check"><img src={logo} alt="icon" height="20px" /><h4>Silver Concierge</h4></div>
-								<div className="check"><img src={logo} alt="icon" height="20px" /><h4>NCR Silver Quantum</h4></div>
-								<h2>24/7 Support</h2>
-								<h3> <Icon onClick={this.next} aria-hidden="true" className="chevron right"></Icon> Product Details</h3>
-
-							<bold><h1>price: ${product.price}</h1></bold>
-
+							<div className="check"><img src={logo} alt="icon" height="20px" /><h4>NCR Silver Quantum</h4></div>
+							<hr />
+							<h2>24/7 Support</h2>
+							<hr />
+							<h3> <Icon onClick={this.next} aria-hidden="true" className="chevron right"></Icon> Product Details</h3>
+							<hr />
+							<Price>
+							<h1 style={{fontWeight: '900'}}>price: ${product.price}</h1>
+</Price>
 							<Button color="success" onClick={() => this.handleClick(product)} ><FontAwesomeIcon className= 'icon' icon={faPlusCircle}/> Add to cart</Button>
 							</div>
 					))}

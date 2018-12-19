@@ -22,6 +22,7 @@ const SolutionStyles = styled.div`
 `
 const BusinessTypeStyle = styled.div`
 height: 1000px;
+font-family: 'Raleway', sans-serif;
 `
 const Header = styled.div`
 display: flex;
