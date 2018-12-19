@@ -34,6 +34,7 @@ class SolutionProducts extends Component {
   state={
     products: [],
     cart: [],
+    qty: [],
     grandTotal: 0
   }
   componentDidMount() {
@@ -52,8 +53,14 @@ class SolutionProducts extends Component {
 
   handleClick = (product) => {
     const expandState = [...this.state.cart, product ]
-    this.setState({ cart: expandState, grandTotal: this.state.grandTotal + parseFloat(product.price)})
+    const expandQty = [...this.state.qty, {id: product.id, qty: 1} ]
+    this.setState({ 
+      cart: expandState, 
+      grandTotal: this.state.grandTotal + parseFloat(product.price),
+      qty: expandQty
+    })
     localStorage.setItem('shopping-cart', JSON.stringify(expandState));
+    localStorage.setItem('shopping-cart-qty', JSON.stringify(expandQty));
   }
 
   removeClick = (product) => {
@@ -118,7 +125,7 @@ class SolutionProducts extends Component {
                         <div className='col-xs-12 col-sm-4 col-md-4 col-lg-4 m-b-1'><img src={product.image_url} alt="bundles" height="100px" style={{borderRadius: '25px'}}/></div>
                       </div>
                       <div className='col-xs-12 col-sm-4 col-md-4'>
-                       
+                       Qty: <input type='number' name='qty' />
                         <p>price: ${product.price}</p>
                       </div>
                       <div className="col-xs-12 col-sm-4 col-md-4 col-lg-3">
