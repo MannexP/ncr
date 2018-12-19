@@ -1,5 +1,36 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import styled from 'styled-components';
+
+
+const LoginStyle = styled.div`
+height:100vh;
+display: flex;
+justify-content: center;
+
+
+`
+const Header = styled.div`
+/* display: flex;
+justify-content: center; */
+margin: 0 auto;
+color: #3C3C3C;
+h1{
+  font-size: 4rem;
+}
+`
+const Forms = styled.div`
+display: flex;
+justify-content: center;
+border-style: groove;
+height: 50vh;
+width: 20vw;
+border-radius: 15px;
+margin-top: 20vh;
+background: #EAEDED;
+`
+
+
 class Login extends Component {
   state = {
     username: '',
@@ -13,7 +44,7 @@ class Login extends Component {
         .then(res => {
           this.setState({ username: res.data.username })
         })
-        this.props.history.push(`/profile`)
+      this.props.history.push(`/profile`)
     }
   }
 
@@ -42,24 +73,31 @@ class Login extends Component {
 
   render() {
     return (
-      <form onSubmit={e => this.handleLogin(e, this.state)}>
-        <h4>Log In</h4>
-        <label htmlFor="username">Username</label>
-        <input
-          type="text"
-          name="username"
-          value={this.state.username}
-          onChange={this.handleChange}
-        />
-        <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          name="password"
-          value={this.state.password}
-          onChange={this.handleChange}
-        />
-        <input type="submit" />
-      </form>
+      <LoginStyle>
+        <Header>
+          <h1>Log In</h1>       
+        </Header>  
+        <Forms>
+        <form onSubmit={e => this.handleLogin(e, this.state)}>
+          
+          <label htmlFor="username">Username</label>
+          <input
+            type="text"
+            name="username"
+            value={this.state.username}
+            onChange={this.handleChange}
+          />
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            value={this.state.password}
+            onChange={this.handleChange}
+          />
+          <input type="submit" />
+        </form>
+        </Forms>
+      </LoginStyle>
     );
   }
 }
