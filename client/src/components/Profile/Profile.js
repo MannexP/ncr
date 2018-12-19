@@ -258,8 +258,9 @@ class Profile extends Component {
                         </FlexContainer3>
                     </div>
                 </div>
+               
             </ProfileStyles>
         );
-    }
+    }}
 
 export default Profile;
