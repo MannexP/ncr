@@ -4,13 +4,18 @@ import './assets/Footer.css'
 
 
 
+const Buffer = styled.div`
+  margin-top:25px;
+  `
+
 const FooterBar = styled.div`
+display: grid;
 
 footer {
   color: white;
   background: #262222;
   padding: 1rem;
-  height: 150px;
+  height: 15rem;
   text-align: left;
   padding-left: 50px;
 }
@@ -30,6 +35,8 @@ li{
 }
 .list{
     font-weight: 200;
+    display: flex;
+    flex-direction: column;
 }
 input{
   border-radius:5px;
@@ -46,8 +53,9 @@ class Footer extends Component {
           <footer>
             <div className="ncr-silver">
               <ul>
-                <li>NCR SILVER </li>
+                {/* <li>NCR SILVER </li> */}
                 <div className='list'>
+                  <li style={{ fontWeight: 'bold' }}>NCR SILVER </li>
                   <li>About</li>
                   <li>Products</li>
                   <li>Build A Solution</li>
@@ -55,34 +63,39 @@ class Footer extends Component {
                 </div>
               </ul>
             </div>
-            {/* <div>
-                  Industries Served
-                  <ul>
-                    <li>Retail</li>
-                    <li>Restaurant</li>
-                    <li>Cafes</li>
-                    <li>Bars</li>
-                    <li>Gift Shops</li>
-                    <li>Services</li>
-                    <li>Bakeries</li>
-                    <li>Liquor Store</li>
-                    <li>Vape Shop</li>
-                    <li>Food Trucks</li>
-                  </ul>
-                </div> */}
+          
+          </footer>
+        </FooterBar>
+        <FooterBar>
+          <footer>
+            <div className="ncr-silver">
+              <ul>
+                <div></div>
+                <div className='list'>
+                <Buffer>
+                    <div></div>
+                  </Buffer>
+                  <li>Login</li>
+                  <li>Products</li>
+                  <li>Build A Solution</li>
+                  <li>Support</li>
+                </div>
+              </ul>
+            </div>
+          </footer>
+        </FooterBar>
+        <FooterBar>
+          <footer>
+            <div className="ncr-silver">
+              <ul>
 
-          </footer>
-        </FooterBar>
-        <FooterBar>
-          <footer>
-            <div className="ncr-silver">
-              <ul>
-                <li>NCR SILVER </li>
                 <div className='list'>
-                  <li>About</li>
-                  <li>Products</li>
-                  <li>Build A Solution</li>
-                  <li>Support</li>
+                  <li style={{ fontWeight: 'bold' }}>Industries Served </li>
+                  <li>Retail</li>
+                  <li>Restaurant</li>
+                  <li>Cafes</li>
+                  <li>Bars</li>
+                  <li>Gift Shops</li>
                 </div>
               </ul>
             </div>
@@ -92,45 +105,21 @@ class Footer extends Component {
           <footer>
             <div className="ncr-silver">
               <ul>
-                <li>NCR SILVER </li>
                 <div className='list'>
-                  <li>About</li>
-                  <li>Products</li>
-                  <li>Build A Solution</li>
-                  <li>Support</li>
+                  <Buffer>
+                    <div></div>
+                  </Buffer>
+                  <li>Services</li>
+                  <li>Bakeries</li>
+                  <li>Liquor Store</li>
+                  <li>Vape Shop</li>
+                  <li>Food Trucks</li>
                 </div>
               </ul>
             </div>
           </footer>
         </FooterBar>
-        <FooterBar>
-          <footer>
-            <div className="ncr-silver">
-              <ul>
-                <li>NCR SILVER </li>
-                <div className='list'>
-                  <li>About</li>
-                  <li>Products</li>
-                  <li>Build A Solution</li>
-                  <li>Support</li>
-                </div>
-              </ul>
-            </div>
-          </footer>
-        </FooterBar>
-        {/* <FooterBar>
-          <footer>
-          <div className="ncr-silver">
-              <ul>
-                <li>NCR SILVER </li>
-                <li>About</li>
-                <li>Products</li>
-                <li>Build A Solution</li>
-                <li>Support</li>
-              </ul>
-            </div>
-          </footer>
-        </FooterBar> */}
+
         <FooterBar>
           <footer>
             <h5>>Sign up for Our Webinar</h5>
