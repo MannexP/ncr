@@ -7,6 +7,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 import { faPlusCircle } from '@fortawesome/free-solid-svg-icons'
+import { faPlusSquare } from '@fortawesome/free-solid-svg-icons'
+import { faMinusSquare } from '@fortawesome/free-solid-svg-icons'
 import Solution from './images/solutionImage.png';
 import styled from 'styled-components';
 import logo from '../../images/Icon.png';
@@ -15,6 +17,8 @@ import { Icon } from 'semantic-ui-react';
 library.add(faTimesCircle)
 library.add(faShoppingCart)
 library.add(faPlusCircle)
+library.add(faPlusSquare)
+library.add(faMinusSquare)
 
 const Straight = styled.div`
 display: flex;
@@ -26,9 +30,11 @@ margin-top: 20px;
 }
 `
 const CartStyle = styled.div`
-
 	display:flex;
-
+  .buttons{
+    display: flex;
+    flex-direction: row;
+  }
 `
 class SolutionProducts extends Component {
 	state={
@@ -47,17 +53,45 @@ class SolutionProducts extends Component {
 			this.setState({cart: localCart, qty: localQty})
 			localCart.map(product => {
         const qty = localQty.filter(qty => {return qty.product === product.id})
-        console.log(qty[0].qty)
-        console.log((parseFloat(product.price) * parseInt(qty[0].qty)))
 				this.state.grandTotal += (parseFloat(product.price) * parseInt(qty[0].qty))
 			})
 		}
 
 	}
 
-	handleChange = () => {
-		console.log('hit')
-	}
+	upChange = (product) => {
+    // spread qty
+    const expandQty = [...this.state.qty]
+    // find single qty
+    const singleItemQty = expandQty.filter(single => {
+      return single.product === product.id
+    })
+    const filteredItemsQty = expandQty.filter(single => {
+      return single.product !== product.id
+    })
+
+		singleItemQty[0].qty++
+    const newQty = filteredItemsQty.concat(singleItemQty)
+    this.setState({qty: newQty})
+    localStorage.setItem('shopping-cart-qty', JSON.stringify(newQty));
+  }
+  
+  downChange = (product) => {
+    // spread qty
+    const expandQty = [...this.state.qty]
+    // find single qty
+    const singleItemQty = expandQty.filter(single => {
+      return single.product === product.id
+    })
+    const filteredItemsQty = expandQty.filter(single => {
+      return single.product !== product.id
+    })
+
+		singleItemQty[0].qty--
+    const newQty = filteredItemsQty.concat(singleItemQty)
+    this.setState({qty: newQty})
+    localStorage.setItem('shopping-cart-qty', JSON.stringify(newQty));
+  }
 
 	handleClick = (product) => {
     // spread cart
@@ -80,7 +114,7 @@ class SolutionProducts extends Component {
       singleItemQty[0].qty++
       const newQty = filteredItemsQty.concat(singleItemQty)
       this.setState({qty: newQty})
-      // localStorage.setItem('shopping-cart-qty', JSON.stringify(this.state.qty));
+      localStorage.setItem('shopping-cart-qty', JSON.stringify(newQty));
     } else {
       const newItem = [...this.state.cart, product]
       const expandQty = [...this.state.qty, {product: product.id, qty: 1} ]
@@ -156,8 +190,11 @@ class SolutionProducts extends Component {
 													<div className='col-xs-12 col-sm-4 col-md-4 col-lg-4 m-b-1'><img src={product.image_url} alt="bundles" height="100px" style={{borderRadius: '25px'}}/></div>
 												</div>
 												<div className='col-xs-12 col-sm-4 col-md-4'>
-												Qty: <input onChange={this.handleChange} type='number' name='qty' value={productQty[0].qty} />
-													<p>price: ${product.price}</p>
+                        Qty: 
+												  <input type='number' style={{display: 'inline', width: 70+'px'}} name='qty' value={productQty[0].qty} />
+                        <Button style={{display: 'inline'}} onClick={() => this.downChange(product)}><FontAwesomeIcon className= 'icon' icon={faMinusSquare}/></Button>
+                        <Button style={{display: 'inline'}} color="primary" onClick={() => this.upChange(product)}><FontAwesomeIcon className= 'icon' icon={faPlusSquare}/></Button>
+													<p>Product Total: ${product.price * productQty[0].qty}</p>
 												</div>
 												<div className="col-xs-12 col-sm-4 col-md-4 col-lg-3">
 													<Button color="danger" onClick={() => this.removeClick(product)}><FontAwesomeIcon className= 'icon' icon={faTimesCircle}/> Remove</Button>
