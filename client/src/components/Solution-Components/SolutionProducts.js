@@ -56,15 +56,43 @@ class SolutionProducts extends Component {
 	}
 
 	handleClick = (product) => {
-		const expandState = [...this.state.cart, product ]
-		const expandQty = [...this.state.qty, {product: product.id, qty: 1} ]
-		this.setState({ 
-			cart: expandState, 
-			grandTotal: this.state.grandTotal + parseFloat(product.price),
-			qty: expandQty
-		})
-		localStorage.setItem('shopping-cart', JSON.stringify(expandState));
-		localStorage.setItem('shopping-cart-qty', JSON.stringify(expandQty));
+    // spread cart
+    const expandState = [...this.state.cart]
+    // spread qty
+    const expandQty = [...this.state.qty]
+    //find single product
+    const singleItem = expandState.filter(single => {
+      return single.id === product.id
+    })
+    // find single qty
+    const singleItemQty = expandQty.filter(single => {
+      return single.product === product.id
+    })
+    // find other products
+    const filteredItems = expandState.filter(single => {
+      return single.id !== product.id
+    })
+    // console.log('filteredItems: ', filteredItems)
+    // find other qtys
+    const filteredItemsQty = expandQty.filter(single => {
+      return single.product !== product.id
+    })
+    // console.log('filteredItemsQty: ', filteredItemsQty)
+
+    if(singleItem.length > 0){
+      singleItemQty[0].qty++
+      localStorage.setItem('shopping-cart-qty', JSON.stringify(this.state.qty));
+    } else {
+      const newItem = [...this.state.cart, product]
+      const expandQty = [...this.state.qty, {product: product.id, qty: 1} ]
+      this.setState({ 
+        cart: newItem, 
+        grandTotal: this.state.grandTotal + parseFloat(product.price),
+        qty: expandQty
+      })
+      localStorage.setItem('shopping-cart', JSON.stringify(newItem));
+      localStorage.setItem('shopping-cart-qty', JSON.stringify(expandQty));
+    }
 	}
 
 	removeClick = (product) => {
@@ -119,7 +147,6 @@ class SolutionProducts extends Component {
 									const productQty = this.state.qty.filter(qty => {
 										return product.id === qty.product
 									})
-									console.log(productQty[0].qty)
 									return <div className="list-group" key={product.id}>
 										<span>
 											<div className="list-group-item list-group-item-action">
@@ -130,7 +157,7 @@ class SolutionProducts extends Component {
 													<div className='col-xs-12 col-sm-4 col-md-4 col-lg-4 m-b-1'><img src={product.image_url} alt="bundles" height="100px" style={{borderRadius: '25px'}}/></div>
 												</div>
 												<div className='col-xs-12 col-sm-4 col-md-4'>
-												Qty: <input onChange={this.handleChange} type='number' name='qty' value={productQty[0].qty} />
+												Qty: <input onChange={this.handleChange} type='number' name='qty' value='1' />
 													<p>price: ${product.price}</p>
 												</div>
 												<div className="col-xs-12 col-sm-4 col-md-4 col-lg-3">
