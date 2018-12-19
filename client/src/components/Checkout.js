@@ -69,7 +69,6 @@ class VerticalLinearStepper extends React.Component {
     if (this.state.logged_in || this.state.checkout) {
       axios.get('/api/current_user/')
         .then(res => {
-          console.log(res)
           this.setState({ username: res.data.username })
         })
     } else {

@@ -11,10 +11,9 @@ class Login extends Component {
     if (this.state.logged_in) {
       axios.get('/api/current_user/')
         .then(res => {
-          console.log(res)
           this.setState({ username: res.data.username })
         })
-        this.props.history.push(`/products`)
+        this.props.history.push(`/profile`)
     }
   }
 
@@ -37,7 +36,7 @@ class Login extends Component {
           logged_in: true,
           username: res.data.user.username
         })
-        this.props.history.push(`/products`)
+        this.props.history.push(`/profile`)
       })
   }
 
