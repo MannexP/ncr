@@ -92,8 +92,8 @@ img{
     margin: 0 auto;
     border: solid 3px;
     border-radius:50%;
-    height: 100px;
-    width: 100px;
+    height:4rem;
+    width: 4rem;
 }
 `
 const ImageWrapper1 = styled.div`
@@ -105,8 +105,8 @@ img{
     margin-top: 50px;
     border: solid 3px;
     border-radius:50%;
-    height: 100px;
-    width: 100px;
+    height:5rem;
+    width: 5rem;
 }
 `
 const FlexContainer3 = styled.div`
@@ -164,7 +164,7 @@ class Profile extends Component {
                 <div className="three">
                     <ImageWrapper1>
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz4k7ySWXn8hTb7DmvwyvxetkqLN0yhEHiFBs23x4nEnDiY5I43Q" alt="My Orders"></img>{"\n"}
-                        <h5>My Orders</h5>
+                        <p style={{marginTop: '5px'}}>My Orders</p>
                     </ImageWrapper1>
                 </div>
                 <div className="four">
@@ -194,7 +194,8 @@ class Profile extends Component {
                 <div className="five">
                     <ImageWrapper>
                         <img src="https://img.icons8.com/wired/2x/settings.png" alt="My Orders"></img>{"\n"}
-                        <h5>Account Settings</h5>
+                        
+                        <p style={{marginTop: '5px'}}>Account Settings</p>
                     </ImageWrapper>
                 </div>
                 <div className="six">
@@ -247,15 +248,6 @@ class Profile extends Component {
                             </div>
                         </FlexContainer3>
                     </div>
-                    <div className="nine">
-                    </div>
-                    <div className="ten">
-                        {/* <FlexContainer4>
-
-
-                    </FlexContainer4> */}
-                    </div>
-
                 </div>
             </ProfileStyles>
         );
