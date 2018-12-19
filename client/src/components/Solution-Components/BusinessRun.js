@@ -32,7 +32,7 @@ const IconStyles = styled.div`
 margin-top: 100px;
 `
 const IconStylesL = styled.div`
-margin-top: 103px;
+margin-top: 100px;
 `
 
 class BusinessType extends Component {
