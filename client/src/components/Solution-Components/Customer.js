@@ -38,8 +38,6 @@ justify-content: center;
 const IconStyles = styled.div`
 margin-top: 43px;
 `
-
-
 class Customer extends Component {
   next = e => {
     e.preventDefault();
