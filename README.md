@@ -16,7 +16,7 @@ Table of Contents
 > National Cash Register(NCR) is the original creators of the cash register. Their NCR Silver branch which is for small business companies is creating an app for businesses to buy their products. 
  <br>
  <br>
-> To help small businesses we built a guided sales solution to lead them to the product best suited for them. We added a shopping cart where they can add, edit, update and delete what they wish to buy. Created easy step by step checkout for both users and guests. Added the ability to sign up and sign in to their profile. 
+To help small businesses we built a guided sales solution to lead them to the product best suited for them. We added a shopping cart where they can add, edit, update and delete what they wish to buy. Created easy step by step checkout for both users and guests. Added the ability to sign up and sign in to their profile. 
 
 ### Live Site
 [Click Here For Site](https://ncr-silver.herokuapp.com)
