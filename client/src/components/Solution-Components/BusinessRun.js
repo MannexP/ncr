@@ -37,6 +37,13 @@ const IconStylesL = styled.div`
 margin-top: 100px;
 
 `
+const Build = styled.div`
+display: flex;
+justify-content: center;
+margin-top: 40px;
+font-size: 
+
+`
 
 class BusinessType extends Component {
   next = (e) => {
@@ -66,6 +73,9 @@ class BusinessType extends Component {
               
             </div>
             <div className="grouped fields">
+            <Build>
+              <h1>Build Your Solution</h1>
+            </Build>
               <Header>
                 <h1>What kind of business do you run?</h1>
               </Header>

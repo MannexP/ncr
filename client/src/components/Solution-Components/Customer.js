@@ -39,6 +39,7 @@ const IconStyles = styled.div`
 margin-top: 43px;
 `
 
+
 class Customer extends Component {
   next = e => {
     e.preventDefault();
@@ -55,6 +56,7 @@ class Customer extends Component {
             <img src={Solution} alt="solution image" width="100%" />
             {/* <img src={build} alt="build image" width="100%" /> */}
             {/* <img src={answer} alt="build image" width="100%" /> */}
+           
             <Header>
               <h1>Build your Solution</h1>
             </Header>
