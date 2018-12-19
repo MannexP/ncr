@@ -30,6 +30,20 @@ border-radius: 15px;
 margin-top: 20vh;
 
 `
+const ButtonStyles = styled.div`
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 9px;
+    font-weight: bold;
+}
+`
 
 
 class Login extends Component {
@@ -75,31 +89,33 @@ class Login extends Component {
   render() {
     return (
       <LoginStyle>
-        
-          
-       
+
+
+
         <Forms>
           <div>
-        <h1>Log In</h1>
-          <form onSubmit={e => this.handleLogin(e, this.state)}>
-            <label htmlFor="username">Username</label>
-            <input
-              type="text"
-              name="username"
-              value={this.state.username}
-              onChange={this.handleChange}
-            />
-            <div></div>
-            <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              name="password"
-              value={this.state.password}
-              onChange={this.handleChange}
-            />
-            <div></div>
-            <input type="submit" />
-          </form>
+            <h1>Log In</h1>
+            <form onSubmit={e => this.handleLogin(e, this.state)}>
+              <label htmlFor="username">Username</label>
+              <input
+                type="text"
+                name="username"
+                value={this.state.username}
+                onChange={this.handleChange}
+              />
+              <div></div>
+              <label htmlFor="password">Password</label>
+              <input
+                type="password"
+                name="password"
+                value={this.state.password}
+                onChange={this.handleChange}
+              />
+              <div></div>
+              <ButtonStyles>
+                <button type="submit">Submit</button>
+              </ButtonStyles>
+            </form>
           </div>
         </Forms>
       </LoginStyle>
