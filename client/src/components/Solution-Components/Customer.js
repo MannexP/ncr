@@ -24,7 +24,7 @@ height: 1000px;
 const Header = styled.div`
 display: flex;
 justify-content: center;
-margin-top: 20px;
+margin-top: 40px;
 `
 const SubHeader = styled.div`
 display: flex;
@@ -35,7 +35,9 @@ const Choices = styled.div`
 display: flex;
 justify-content: center;
 `
-
+const IconStyles = styled.div`
+margin-top: 43px;
+`
 class Customer extends Component {
   next = e => {
     e.preventDefault();
@@ -52,6 +54,7 @@ class Customer extends Component {
             <img src={Solution} alt="solution image" width="100%" />
             {/* <img src={build} alt="build image" width="100%" /> */}
             {/* <img src={answer} alt="build image" width="100%" /> */}
+           
             <Header>
               <h1>Build your Solution</h1>
             </Header>
@@ -88,11 +91,14 @@ class Customer extends Component {
               </div>
 
               <div>
-                <Icon
-                  onClick={this.next}
-                  aria-hidden="true"
-                  className="chevron right big"
-                />
+                <IconStyles>
+                  <Icon
+                    onClick={this.next}
+                    aria-hidden="true"
+                    className="chevron right big"
+                  />
+                </IconStyles>
+                
               </div>
             </SolutionStyles>
           </Form>
