@@ -42,10 +42,14 @@ class SolutionProducts extends Component {
 			this.setState({ products: res.data })
 		})
 		if(localStorage.getItem('shopping-cart')){
-			const localCart = JSON.parse(localStorage.getItem('shopping-cart'))
-			this.setState({cart: localCart})
+      const localCart = JSON.parse(localStorage.getItem('shopping-cart'))
+      const localQty = JSON.parse(localStorage.getItem('shopping-cart-qty'))
+			this.setState({cart: localCart, qty: localQty})
 			localCart.map(product => {
-				this.state.grandTotal += parseFloat(product.price)
+        const qty = localQty.filter(qty => {return qty.product === product.id})
+        console.log(qty[0].qty)
+        console.log((parseFloat(product.price) * parseInt(qty[0].qty)))
+				this.state.grandTotal += (parseFloat(product.price) * parseInt(qty[0].qty))
 			})
 		}
 
@@ -68,20 +72,15 @@ class SolutionProducts extends Component {
     const singleItemQty = expandQty.filter(single => {
       return single.product === product.id
     })
-    // find other products
-    const filteredItems = expandState.filter(single => {
-      return single.id !== product.id
-    })
-    // console.log('filteredItems: ', filteredItems)
-    // find other qtys
     const filteredItemsQty = expandQty.filter(single => {
       return single.product !== product.id
     })
-    // console.log('filteredItemsQty: ', filteredItemsQty)
 
     if(singleItem.length > 0){
       singleItemQty[0].qty++
-      localStorage.setItem('shopping-cart-qty', JSON.stringify(this.state.qty));
+      const newQty = filteredItemsQty.concat(singleItemQty)
+      this.setState({qty: newQty})
+      // localStorage.setItem('shopping-cart-qty', JSON.stringify(this.state.qty));
     } else {
       const newItem = [...this.state.cart, product]
       const expandQty = [...this.state.qty, {product: product.id, qty: 1} ]
@@ -157,7 +156,7 @@ class SolutionProducts extends Component {
 													<div className='col-xs-12 col-sm-4 col-md-4 col-lg-4 m-b-1'><img src={product.image_url} alt="bundles" height="100px" style={{borderRadius: '25px'}}/></div>
 												</div>
 												<div className='col-xs-12 col-sm-4 col-md-4'>
-												Qty: <input onChange={this.handleChange} type='number' name='qty' value='1' />
+												Qty: <input onChange={this.handleChange} type='number' name='qty' value={productQty[0].qty} />
 													<p>price: ${product.price}</p>
 												</div>
 												<div className="col-xs-12 col-sm-4 col-md-4 col-lg-3">
