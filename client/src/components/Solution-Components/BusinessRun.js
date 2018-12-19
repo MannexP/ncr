@@ -16,6 +16,7 @@ const SolutionStyles = styled.div`
 `
 const BusinessRunStyle = styled.div`
 height: 1000px;
+font-family: 'Raleway', sans-serif;
 `
 const Choices = styled.div`
   display: flex;

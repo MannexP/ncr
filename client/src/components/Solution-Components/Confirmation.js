@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Button, List } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
-
+import styled from 'styled-components';
+import '../assets/css/Confirmation.css';
 class Confirmation extends Component{
     back  = (e) => {
         e.preventDefault();
@@ -11,8 +12,9 @@ class Confirmation extends Component{
     render(){
         const {values: { customerAnswer, businessRunAnswer, businessTypeAnswer, featureAnswer, multiFeatureAnswer }} = this.props;
         return(
-            <div>
-                <h1 className="ui centered">Confirm your Details</h1>
+            <div className="changeHeight">
+                <div>
+                <h1 className="ui centered" id="confirm">Confirm your Details</h1>
                 <p>Click Confirm if the following details have been correctly entered</p>
                 <List>
                     <List.Item>
@@ -34,7 +36,8 @@ class Confirmation extends Component{
                 </List>
 
                 <Button onClick={this.back}>Back</Button>
-                <Link to='/solution-products'><Button>View Suggestions</Button></Link>
+                    <Link to='/solution-products'><Button color="green">View Suggestions</Button></Link>
+                    </div>
             </div>
         )
     }

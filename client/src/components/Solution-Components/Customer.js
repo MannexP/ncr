@@ -20,6 +20,7 @@ const SolutionStyles = styled.div`
 `
 const BuildSolutionStyle = styled.div`
 height: 1000px;
+font-family: 'Raleway', sans-serif;
 `
 const Header = styled.div`
 display: flex;
