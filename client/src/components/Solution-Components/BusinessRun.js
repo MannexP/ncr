@@ -29,10 +29,13 @@ justify-content: center;
 margin-top: 40px;
 `
 const IconStyles = styled.div`
-margin-top: 100px;
+margin-top: 90px;
+margin-right: 120px;
+
 `
 const IconStylesL = styled.div`
 margin-top: 100px;
+
 `
 
 class BusinessType extends Component {

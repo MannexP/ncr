@@ -27,7 +27,12 @@ justify-content: center;
 margin-top: 40px;
 `
 const IconStyles = styled.div`
-margin-top: 96px;
+margin-top: 75px;
+margin-left: 10px;
+`
+const IconStyles1 = styled.div`
+margin-top: 75px;
+margin-right: 40px;
 
 `
 
@@ -106,9 +111,9 @@ class MultiFeature extends Component {
               </div>
             </div>
             <div>
-              <IconStyles>
+              <IconStyles1>
                 <Icon onClick={this.next} aria-hidden="true" className="chevron right big"></Icon>
-              </IconStyles>
+              </IconStyles1>
 
             </div>
           </SolutionStyles>
