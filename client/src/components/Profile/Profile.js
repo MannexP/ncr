@@ -1,82 +1,83 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import axios from 'axios';
 
 const ProfileStyles = styled.div`
 display: grid;
- grid-template-columns: 20% 80%;
- grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
- justify-content: space-between;    
- h6{
-    font-weight: bold;
+	grid-template-columns: 20% 80%;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+	justify-content: space-between; 
+	h6{
+		font-weight: bold;
 }
 .one{
-   display: grid;
-   justify-content: center;
- .avatar{
-       img{
-            margin: 0 auto;
-            height: 200px;
-            width: 200px;
-            margin-top: 20px;
-            border-radius: 50%;     
-       }
-  }
+	display: grid;
+	justify-content: center;
+	.avatar{
+		img{
+			margin: 0 auto;
+			height: 200px;
+			width: 200px;
+			margin-top: 20px;
+			border-radius: 50%; 
+		}
+		}
 }
 
 `
 const FlexContainer = styled.div`
-       display: grid;
-       grid-template-columns: 30% 20% 20% 30%;
-       border: solid 5px;
-       border-style: groove;
-       height: 80px;
-       width: 100%;
-       padding: 10px;
-       h5{
-           font-weight: lighter;     
-       }
-       `
+	display: grid;
+	grid-template-columns: 30% 20% 20% 30%;
+	border: solid 5px;
+	border-style: groove;
+	height: 80px;
+	width: 100%;
+	padding: 10px;
+	h5{
+		font-weight: lighter; 
+	}
+	`
 const FlexContainer2 = styled.div`
-       display: grid;
-       grid-template-columns: 30% 30% 30%;
-       border: solid 3.5px;
-       border-bottom: solid 7px;
-       border-style: groove;
-       border-bottom-style: groove;
-       h5{
-           font-weight: lighter;
-       }     
-       span{
-           color:green;
-           font-weight: bold;
-       }       
-       height: 225px;
-       width: 100%;
-       padding: 10px;
-    .status{ 
-        img{
-            border: solid .75px #DBDADA;
-            border-radius: 5%;
-            height: 150px;
-            width: 150px;
-            
-        }
-    }   
+	display: grid;
+	grid-template-columns: 30% 30% 30%;
+	border: solid 3.5px;
+	border-bottom: solid 7px;
+	border-style: groove;
+	border-bottom-style: groove;
+	h5{
+		font-weight: lighter;
+	} 
+	span{
+		color:green;
+		font-weight: bold;
+	} 
+	height: 225px;
+	width: 100%;
+	padding: 10px;
+	.status{ 
+		img{
+			border: solid .75px #DBDADA;
+			border-radius: 5%;
+			height: 150px;
+			width: 150px;
+
+		}
+	} 
 `
 const ButtonStyles = styled.div`
 button {
-    background-color: #31A9E0;
-    border: none;
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 9px;
-    font-weight: bold;   
-    width: 100%;
-    margin: 10px;
+	background-color: #31A9E0;
+	border: none;
+	color: white;
+	padding: 15px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 9px;
+	font-weight: bold; 
+	width: 100%;
+	margin: 10px;
 }
 `
 const Padding = styled.div`
@@ -110,28 +111,35 @@ img{
 }
 `
 const FlexContainer3 = styled.div`
-       display: grid;
-       grid-template-columns: 40% 20% 20% 20%;
-       border: solid 5px;
-       border-style: groove;
-       height: 110px;
-       width: 100;
-       padding: 20px;
-       h5{
-           font-weight: lighter;     
-       }
-       `
+	display: grid;
+	grid-template-columns: 40% 20% 20% 20%;
+	border: solid 5px;
+	border-style: groove;
+	height: 110px;
+	width: 100;
+	padding: 20px;
+	h5{
+		font-weight: lighter; 
+	}
+	`
 const POpadding = styled.div`
 margin-top: 50px;
-
 `
 
-
-
-
-
-
 class Profile extends Component {
+  state={
+		logged_in: localStorage.getItem('token') ? true : false
+	}
+	componentDidMount() {
+		if (this.state.logged_in) {
+			axios.get('/api/current_user/')
+				.then(res => {
+					this.setState({ username: res.data.username })
+				})
+		} else {
+			this.props.history.push(`/login`)
+		}
+		}
     render() {
         return (
             <ProfileStyles>
@@ -252,6 +260,5 @@ class Profile extends Component {
             </ProfileStyles>
         );
     }
-}
 
 export default Profile;
