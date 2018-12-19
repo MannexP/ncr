@@ -15,11 +15,9 @@ const SolutionStyles = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
 `
 const MultiFeatureStyle = styled.div`
 height: 1000px;
-
 `
 const Header = styled.div`
 display: flex;
@@ -33,7 +31,6 @@ margin-left: 10px;
 const IconStyles1 = styled.div`
 margin-top: 75px;
 margin-right: 40px;
-
 `
 
 class MultiFeature extends Component {
