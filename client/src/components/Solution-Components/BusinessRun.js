@@ -28,8 +28,12 @@ display: flex;
 justify-content: center;
 margin-top: 40px;
 `
-
-
+const IconStyles = styled.div`
+margin-top: 100px;
+`
+const IconStylesL = styled.div`
+margin-top: 103px;
+`
 
 class BusinessType extends Component {
   next = (e) => {
@@ -53,7 +57,10 @@ class BusinessType extends Component {
         <Form color='green' >
           <SolutionStyles>
             <div>
-              <Icon onClick={this.back} aria-hidden="true" className="chevron left big"></Icon>
+              <IconStylesL>
+                <Icon onClick={this.back} aria-hidden="true" className="chevron left big"></Icon>
+              </IconStylesL>
+              
             </div>
             <div className="grouped fields">
               <Header>
@@ -88,18 +95,11 @@ class BusinessType extends Component {
                 </div>
 
               </Choices>
-
-
-
-
-
-
-
-
-
             </div>
             <div>
-              <Icon onClick={this.next} aria-hidden="true" className="chevron right big"></Icon>
+              <IconStyles>
+                 <Icon onClick={this.next} aria-hidden="true" className="chevron right big"></Icon>
+              </IconStyles> 
             </div>
           </SolutionStyles>
         </Form>
