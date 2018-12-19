@@ -69,8 +69,9 @@ class SolutionProducts extends Component {
     const filteredItemsQty = expandQty.filter(single => {
       return single.product !== product.id
     })
-
-		singleItemQty[0].qty++
+    this.state.grandTotal -= (parseFloat(product.price) * parseInt(singleItemQty[0].qty))
+    singleItemQty[0].qty++
+    this.state.grandTotal += (parseFloat(product.price) * parseInt(singleItemQty[0].qty))
     const newQty = filteredItemsQty.concat(singleItemQty)
     this.setState({qty: newQty})
     localStorage.setItem('shopping-cart-qty', JSON.stringify(newQty));
@@ -86,8 +87,9 @@ class SolutionProducts extends Component {
     const filteredItemsQty = expandQty.filter(single => {
       return single.product !== product.id
     })
-
-		singleItemQty[0].qty--
+    this.state.grandTotal -= (parseFloat(product.price) * parseInt(singleItemQty[0].qty))
+    singleItemQty[0].qty--
+    this.state.grandTotal += (parseFloat(product.price) * parseInt(singleItemQty[0].qty))
     const newQty = filteredItemsQty.concat(singleItemQty)
     this.setState({qty: newQty})
     localStorage.setItem('shopping-cart-qty', JSON.stringify(newQty));
