@@ -7,6 +7,7 @@ import { faUtensils } from '@fortawesome/free-solid-svg-icons'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import { faCut } from '@fortawesome/free-solid-svg-icons'
 import { faMugHot } from '@fortawesome/free-solid-svg-icons'
+import Solution from './images/solutionImage.png';
 
 
 library.add(faUtensils)
@@ -18,7 +19,9 @@ const SolutionStyles = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
+`
+const BusinessTypeStyle = styled.div`
+height: 1000px;
 `
 
 class BusinessType extends Component {
@@ -35,57 +38,62 @@ class BusinessType extends Component {
   }
   render() {
     return (
-      <Form color='green' >
-        <SolutionStyles>
-        <div>
-          <Icon onClick={this.back} aria-hidden="true" className="chevron left big"></Icon>
-        </div>
-        <div className="grouped fields">
-          <label>What type of business are you?</label>
-          <div className="field">
-         
-              <div className="pretty p-icon p-plain p-tada">
-                <input onClick={this.onChange} type="radio" name="businessTypeAnswer" value="Full Service Resturant"/>
-                <div className="state p-primary-o">
-                  
-                  <FontAwesomeIcon className= 'icon' icon={faUtensils} style={{ color: 'black'}}/>
-                  <label>Full Service Restaurant</label>
-                </div>
-              </div>
-          
-              <div className="pretty p-icon p-plain p-tada">
-                <input onClick={this.onChange} type="radio" name="businessTypeAnswer" value="Retail"/>
-                <div className="state p-primary-o">
-                  
-                  <FontAwesomeIcon className= 'icon' icon={faShoppingCart} style={{ color: 'black'}}/>
-                  <label>Retail</label>
-                </div>
-              </div>
-           
-              <div className="pretty p-icon p-plain p-tada">
-                <input onClick={this.onChange} type="radio" name="businessTypeAnswer" value="Service" />
-                <div className="state p-primary-o">
-                  
-                  <FontAwesomeIcon className= 'icon' icon={faCut} style={{ color: 'black'}}/>
-                  <label>Service</label>
-                </div>
-              </div>
-            
-              <div className="pretty p-icon p-plain p-tada">
-                <input onClick={this.onChange} type="radio" name="businessTypeAnswer" value="Cafe or Food Truck"/>
-                <div className="state p-primary-o">
-                  
-                  <FontAwesomeIcon className= 'icon' icon={faMugHot} style={{ color: 'black'}}/>
-                  <label>Cafe or Food Truck</label>
-                </div>
-              </div>
-          </div>
-        </div>
+      <BusinessTypeStyle>
+        <img src={Solution} alt="solution image" width="100%" />
+        <Form color='green' >
+          <SolutionStyles>
           <div>
-            <Icon onClick={this.next} aria-hidden="true" className="chevron right big"></Icon>
+            <Icon onClick={this.back} aria-hidden="true" className="chevron left big"></Icon>
           </div>
-        </SolutionStyles>
-      </Form>
+          <div className="grouped fields">
+            <label>What type of business are you?</label>
+            <div className="field">
+          
+                <div className="pretty p-icon p-plain p-tada">
+                  <input onClick={this.onChange} type="radio" name="businessTypeAnswer" value="Full Service Resturant"/>
+                  <div className="state p-primary-o">
+                    
+                    <FontAwesomeIcon className= 'icon' icon={faUtensils} style={{ color: 'black'}}/>
+                    <label>Full Service Restaurant</label>
+                  </div>
+                </div>
+            
+                <div className="pretty p-icon p-plain p-tada">
+                  <input onClick={this.onChange} type="radio" name="businessTypeAnswer" value="Retail"/>
+                  <div className="state p-primary-o">
+                    
+                    <FontAwesomeIcon className= 'icon' icon={faShoppingCart} style={{ color: 'black'}}/>
+                    <label>Retail</label>
+                  </div>
+                </div>
+            
+                <div className="pretty p-icon p-plain p-tada">
+                  <input onClick={this.onChange} type="radio" name="businessTypeAnswer" value="Service" />
+                  <div className="state p-primary-o">
+                    
+                    <FontAwesomeIcon className= 'icon' icon={faCut} style={{ color: 'black'}}/>
+                    <label>Service</label>
+                  </div>
+                </div>
+              
+                <div className="pretty p-icon p-plain p-tada">
+                  <input onClick={this.onChange} type="radio" name="businessTypeAnswer" value="Cafe or Food Truck"/>
+                  <div className="state p-primary-o">
+                    
+                    <FontAwesomeIcon className= 'icon' icon={faMugHot} style={{ color: 'black'}}/>
+                    <label>Cafe or Food Truck</label>
+                  </div>
+                </div>
+            </div>
+          </div>
+            <div>
+              <Icon onClick={this.next} aria-hidden="true" className="chevron right big"></Icon>
+            </div>
+          </SolutionStyles>
+        </Form>
+
+      </BusinessTypeStyle>
+      
     );
   }
 }
