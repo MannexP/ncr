@@ -10,6 +10,14 @@ Table of Contents
 - [Works Cited](#works-cited)
     - [Libraries Used](#libraries-used)
     - [Tools Used](#tools-used)
+- [Q & A](#q--a)
+    - [Talk about your experience working with the UX team and an actual client and ways that it’s been different than what we’ve done in the past.](#talk-about-your-experience-working-with-the-ux-team-and-an-actual-client-and-ways-that-its-been-different-than-what-weve-done-in-the-past)
+    - [Talk about how your team distributed work amongst each other, and how did you manage who was working on what?](#talk-about-how-your-team-distributed-work-amongst-each-other-and-how-did-you-manage-who-was-working-on-what)
+    - [Give a demo of the product that you have built.](#give-a-demo-of-the-product-that-you-have-built)
+    - [Explain thought process behind data model, design decisions, and 3rd party APIs](#explain-thought-process-behind-data-model-design-decisions-and-3rd-party-apis)
+    - [Given more time, what do you have planned for version 2.0](#given-more-time-what-do-you-have-planned-for-version-20)
+    - [What are your biggest wins from this project?](#what-are-your-biggest-wins-from-this-project)
+    - [And of course… Shout Outs!](#and-of-course-shout-outs)
 
 <!-- /TOC -->
 ### NCR Silver
@@ -48,8 +56,17 @@ Table of Contents
  * Python
  * Axios
  * Heroku
-
-
+  
+### Q & A
+<!-- #### Who are you working for and what is the product you were asked to build? -->
+#### Talk about your experience working with the UX team and an actual client and ways that it’s been different than what we’ve done in the past.
+*Differences: Before we had to make our own wireframes, a lot of pair programming instead of working individually and git branching*
+#### Talk about how your team distributed work amongst each other, and how did you manage who was working on what?
+#### Give a demo of the product that you have built.
+#### Explain thought process behind data model, design decisions, and 3rd party APIs
+#### Given more time, what do you have planned for version 2.0
+#### What are your biggest wins from this project?
+#### And of course… Shout Outs!
 
 
 Table of Contents
@@ -64,5 +81,7 @@ Table of Contents
 - [Works Cited](#works-cited)
     - [Libraries Used](#libraries-used)
     - [Tools Used](#tools-used)
+- [](#)
+- [Who are you working for and what is the product you were asked to build?](#who-are-you-working-for-and-what-is-the-product-you-were-asked-to-build)
 
 <!-- /TOC -->
