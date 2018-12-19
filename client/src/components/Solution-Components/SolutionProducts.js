@@ -133,13 +133,18 @@ class SolutionProducts extends Component {
 	removeClick = (product) => {
 		const filtered = this.state.cart.filter(pCart =>{
 			return pCart.id !== product.id
-		})
+    })
+    const expandQty = [...this.state.qty]
+    const filteredItemsQty = expandQty.filter(single => {
+      return single.product !== product.id
+    })
 		let newTotal = 0
 		filtered.forEach(product => {
 			return newTotal += parseFloat(product.price)
 		})
-		this.setState({ cart: filtered, grandTotal: newTotal })
-		localStorage.setItem('shopping-cart', JSON.stringify(filtered))
+		this.setState({ cart: filtered, qty: filteredItemsQty, grandTotal: newTotal })
+    localStorage.setItem('shopping-cart', JSON.stringify(filtered))
+    localStorage.setItem('shopping-cart-qty', JSON.stringify(filteredItemsQty))
 	}
 	render() {
 		return (
