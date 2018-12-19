@@ -76,7 +76,12 @@ class VerticalLinearStepper extends React.Component {
     }
   }
 
-  handleNext = () => {
+  handleNext = (active, steps) => {
+    if(active === steps - 1){
+      this.props.history.push('/thank-you')
+      localStorage.removeItem('shopping-cart')
+      localStorage.removeItem('shopping-cart-qty')
+    }
     this.setState(state => ({
       activeStep: state.activeStep + 1,
     }));
@@ -99,7 +104,6 @@ class VerticalLinearStepper extends React.Component {
     const steps = getSteps();
     const { activeStep } = this.state;
     const props = {...this.props}
-    console.log(props)
     return (
       <div className={classes.root}>
         <div className="flexed">
@@ -125,7 +129,7 @@ class VerticalLinearStepper extends React.Component {
                         <Button
                           variant="contained"
                           color="primary"
-                          onClick={this.handleNext}
+                          onClick={() => this.handleNext(activeStep, steps.length)}
                           className={classNames(classes.button, classes.cssRoot)}
                         >
                           {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
@@ -139,7 +143,6 @@ class VerticalLinearStepper extends React.Component {
           </Stepper>
           {activeStep === steps.length && (
             <Paper square elevation={0} className={classes.resetContainer}>
-              <Typography>All steps completed - you&apos;re finished</Typography>
               <Button onClick={this.handleReset} className={classes.button}>
                 Reset
               </Button>
