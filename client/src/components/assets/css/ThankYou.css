@@ -1,0 +1,21 @@
+.thanks {
+   text-align: center;
+   font-family: 'Raleway', sans-serif;
+}
+
+#print {
+    margin-left: 230px;
+}
+/* 
+.payment {
+    height: 1000px;
+} */
+
+.or {
+    font-weight: 900;
+}
+
+.support {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 900;
+}
