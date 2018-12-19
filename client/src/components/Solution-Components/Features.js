@@ -35,6 +35,10 @@ const Boxes = styled.div`
 display: flex;
 justify-content: center;
 `
+const IconStyles = styled.div`
+margin-top: 133px;
+
+`
 
 
 class Features extends Component {
@@ -56,7 +60,10 @@ class Features extends Component {
         <Form color='green' >
           <SolutionStyles>
             <div>
-              <Icon onClick={this.back} aria-hidden="true" className="chevron left big"></Icon>
+              <IconStyles>
+                <Icon onClick={this.back} aria-hidden="true" className="chevron left big"></Icon>
+              </IconStyles>
+
             </div>
             <div className="grouped fields">
               <Header>
@@ -65,7 +72,7 @@ class Features extends Component {
               <Choices>
                 <h5>Table layout  •  Transfer Tabs  •  Happy Hour Pricing  •  Forced Modifiers  •  Takeout or Delivery</h5>
               </Choices>
-          
+
               <Choices>
                 <h5>Advanced Check Splitting  •  House Accounts  •  Multi-Station Kitchen Printer Routing  •  Barista or Kitchen Display</h5>
               </Choices>
@@ -98,7 +105,10 @@ class Features extends Component {
               </div>
             </div>
             <div>
-              <Icon onClick={this.next} aria-hidden="true" className="chevron right big"></Icon>
+              <IconStyles>
+                <Icon onClick={this.next} aria-hidden="true" className="chevron right big"></Icon>
+              </IconStyles>
+
             </div>
           </SolutionStyles>
         </Form>

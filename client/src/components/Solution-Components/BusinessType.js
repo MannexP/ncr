@@ -35,13 +35,14 @@ const Choices = styled.div`
   margin-top: 20px;
 `
 const IconStyles = styled.div`
-margin-top: 96px;
+margin-top: 90px;
 
 `
 
 const IconStylesL = styled.div`
-margin-top: 100px;
+margin-top: 90px;
 margin-right:10px;
+
 `
 
 class BusinessType extends Component {
