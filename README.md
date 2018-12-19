@@ -2,6 +2,7 @@ Table of Contents
 <!-- TOC -->
 
 - [NCR Silver](#ncr-silver)
+- [Live Site](#live-site)
 - [Assignment Page](#assignment-page)
 - [UX Prototype](#ux-prototype)
 - [Entity Relationship Diagram](#entity-relationship-diagram)
@@ -9,13 +10,17 @@ Table of Contents
 - [Works Cited](#works-cited)
     - [Libraries Used](#libraries-used)
     - [Tools Used](#tools-used)
-- [Live Site](#live-site)
 
 <!-- /TOC -->
 ### NCR Silver
 > National Cash Register(NCR) is the original creators of the cash register. Their NCR Silver branch which is for small business companies is creating an app for businesses to buy their products. 
  <br>
+ <br>
 To help small businesses we built a guided sales solution to lead them to the product best suited for them. We added a shopping cart where they can add, edit, update and delete what they wish to buy. Created easy step by step checkout for both users and guests. Added the ability to sign up and sign in to their profile. 
+
+### Live Site
+[Click Here For Site](https://ncr-silver.herokuapp.com)
+
 ### Assignment Page
 [Click Here for Assignment Page](https://git.generalassemb.ly/atl-wdi/final_project_group_variant)
 ### UX Prototype
@@ -41,16 +46,17 @@ To help small businesses we built a guided sales solution to lead them to the pr
  * React.js
  * Django
  * Python
- * AJAX
+ * Axios
  * Heroku
 
-### Live Site
-[Click Here For Site]()
+
 
 
 Table of Contents
 <!-- TOC -->
 
+- [NCR Silver](#ncr-silver)
+- [Live Site](#live-site)
 - [Assignment Page](#assignment-page)
 - [UX Prototype](#ux-prototype)
 - [Entity Relationship Diagram](#entity-relationship-diagram)
@@ -58,6 +64,5 @@ Table of Contents
 - [Works Cited](#works-cited)
     - [Libraries Used](#libraries-used)
     - [Tools Used](#tools-used)
-- [Live Site](#live-site)
 
 <!-- /TOC -->
