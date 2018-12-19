@@ -46,18 +46,20 @@ border-right: groove;
 `
 const Checkout = styled.div`
 .guestCheck{
-margin-left:250px;
-margin-top:250px;
+margin-left:90px;
+margin-top:170px;
 width:200px;
+height: 1px;
 display: flex;
 justify-content: center;
 flex-direction: column;
-}
 h3{
-    align-content: center;
-    
+	align-content: center;
+	padding: 15px;
+	margin-left: 50px;
+	
 }
-
+}
 `
 
 const ButtonStyles = styled.div`
@@ -73,6 +75,10 @@ button {
 	border-radius: 9px;
 	font-weight: bold;
 }
+.check {
+	display: flex;
+
+}
 `
 const Profile = styled.div`
 display:grid;
@@ -83,19 +89,19 @@ class Signup extends Component {
 	state = {
 		username: '',
 		email: '',
-    password: '',
-    checkout: false
-  }
-  handleCheckout = () => {
-    localStorage.setItem('checkout', true);
-    this.setState({checkout: true})
-    this.props.history.push(`/checkout`)
-  }
+		password: '',
+		checkout: false
+	}
+	handleCheckout = () => {
+		localStorage.setItem('checkout', true);
+		this.setState({ checkout: true })
+		this.props.history.push(`/checkout`)
+	}
 
 
 	handleSignup = (e) => {
 		e.preventDefault();
-		const payload ={
+		const payload = {
 			username: this.state.username,
 			email: this.state.email,
 			password: this.state.password,
@@ -124,59 +130,62 @@ class Signup extends Component {
 	render() {
 		const { classes } = this.props;
 		return (
-      <div>
-			<FormStyles>
-			<form onSubmit={e => this.handleSignup(e)}>
-				<h4>Sign Up</h4>
-
-				<TextField
-					id="outlined-uncontrolled"
-					label="First Name"
-					className={classes.textField}
-					margin="normal"
-					variant="outlined"
-					name="username"
-					value={this.state.username}
-					onChange={this.handleChange}
-						/>
+			<div>
+				<Profile>
+					<FormStyles>
+						<form onSubmit={e => this.handleSignup(e)}>
+							<h4>Sign Up</h4>
 
 							<TextField
-					id="outlined-uncontrolled"
-					label="Email"
-					className={classes.textField}
-					margin="normal"
-					variant="outlined"
-					name="email"
-					value={this.state.email}
-					onChange={this.handleChange}
-						/>
+								id="outlined-uncontrolled"
+								label="First Name"
+								className={classes.textField}
+								margin="normal"
+								variant="outlined"
+								name="username"
+								value={this.state.username}
+								onChange={this.handleChange}
+							/>
 
-				<TextField
-					id="outlined-uncontrolled"
-					label="Password"
-					className={classes.textField}
-					margin="normal"
-					variant="outlined"
-					name="password"
-					value={this.state.password}
-					onChange={this.handleChange}
-				/>
-					<ButtonStyles>
-					<button type="submit">Sign Up</button>
-				</ButtonStyles>
-			</form>
-			</FormStyles>
-				<Checkout>
-					<div className="guestCheck">
-						<div className="or">
-							<h3>OR</h3>
+							<TextField
+								id="outlined-uncontrolled"
+								label="Email"
+								className={classes.textField}
+								margin="normal"
+								variant="outlined"
+								name="email"
+								value={this.state.email}
+								onChange={this.handleChange}
+							/>
+
+							<TextField
+								id="outlined-uncontrolled"
+								label="Password"
+								className={classes.textField}
+								margin="normal"
+								variant="outlined"
+								type='password'
+								name="password"
+								value={this.state.password}
+								onChange={this.handleChange}
+							/>
+							<ButtonStyles>
+								<button type="submit">Sign Up</button>
+							</ButtonStyles>
+						</form>
+					</FormStyles>
+					<Checkout>
+						<div className="guestCheck">
+							<div className="or">
+								<h3>OR</h3>
+							</div>
+							<ButtonStyles>
+								<button onClick={this.handleCheckout} type="submit">Checkout as Guest</button>
+							</ButtonStyles>
 						</div>
-						<ButtonStyles>
-							<button onClick={this.handleCheckout} type="submit">Checkout as Guest</button>
-						</ButtonStyles>
-					</div>
 					</Checkout>
-          </div>
+				</Profile>
+			</div>
 		);
 	}
 }
