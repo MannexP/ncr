@@ -41,6 +41,7 @@ Table of Contents
 [Click Here for UX Prototype](https://invis.io/NPPIT2TFDYJ)
 ### Entity Relationship Diagram
 ![Image of ERD](client/src/images/erd.png)
+[Full Screen ERD](https://www.lucidchart.com/invitations/accept/b2876a02-4836-4700-a857-7766026aa452)
 
 ### Trello
  [Click Here For Trello](https://trello.com/b/UzSUou6c/ncr)
