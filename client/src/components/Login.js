@@ -9,11 +9,12 @@ display: flex;
 justify-content: center;
 
 
+
 `
 const Header = styled.div`
 /* display: flex;
 justify-content: center; */
-margin: 0 auto;
+/* margin: 0 auto; */
 color: #3C3C3C;
 h1{
   font-size: 4rem;
@@ -27,7 +28,7 @@ height: 50vh;
 width: 20vw;
 border-radius: 15px;
 margin-top: 20vh;
-background: #EAEDED;
+
 `
 
 
@@ -74,28 +75,32 @@ class Login extends Component {
   render() {
     return (
       <LoginStyle>
-        <Header>
-          <h1>Log In</h1>       
-        </Header>  
-        <Forms>
-        <form onSubmit={e => this.handleLogin(e, this.state)}>
+        
           
-          <label htmlFor="username">Username</label>
-          <input
-            type="text"
-            name="username"
-            value={this.state.username}
-            onChange={this.handleChange}
-          />
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            name="password"
-            value={this.state.password}
-            onChange={this.handleChange}
-          />
-          <input type="submit" />
-        </form>
+       
+        <Forms>
+          <div>
+        <h1>Log In</h1>
+          <form onSubmit={e => this.handleLogin(e, this.state)}>
+            <label htmlFor="username">Username</label>
+            <input
+              type="text"
+              name="username"
+              value={this.state.username}
+              onChange={this.handleChange}
+            />
+            <div></div>
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              value={this.state.password}
+              onChange={this.handleChange}
+            />
+            <div></div>
+            <input type="submit" />
+          </form>
+          </div>
         </Forms>
       </LoginStyle>
     );
