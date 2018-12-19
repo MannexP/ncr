@@ -9,7 +9,7 @@ ul li {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: "Logo Right Right Right Right Right Right Right Right Right Right";
-  background-image: linear-gradient(to right, #54B948 30%, #00A77E, #008D9B, #0099BF, #31A9E0);
+  background-image: linear-gradient(to right, #54B948 30%, #00A77E, #008D9B, #0099BF, rgb(40, 104, 133));
 }
 .flexed{
   display: flex;

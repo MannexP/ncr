@@ -65,7 +65,7 @@ const FlexContainer2 = styled.div`
 `
 const ButtonStyles = styled.div`
 button {
-    background-color: #31A9E0;
+    background-color: rgb(40, 104, 133);
     border: none;
     color: white;
     padding: 15px 20px;
