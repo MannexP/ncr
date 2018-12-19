@@ -31,12 +31,12 @@ display: flex;
 justify-content: center;    
 max-width: 300px;
 margin: 10px;
-padding-right: 50px;
+// padding-right: 10px;
 border-radius: 8px;
 margin-left: 400px;
 margin-top: 50px;
 margin-bottom: 100px;
-border-right: groove;
+align-content: stretch;
 .details {
     h4{
         font-weight: lighter;
@@ -60,24 +60,10 @@ button {
     display:flex;
 }
 `
-const Checkout = styled.div`
-.guestCheck{
-margin-left:250px;
-margin-top:250px;
-width:200px;
-display: flex;
-justify-content: center;
-flex-direction: column;
-h3{
-    align-content: center;
-    
-}
-}
-`
-
 const Profile = styled.div`
 display:grid;
 grid-template-columns:1fr 1fr;
+margin-left: 150px
 `
 
 
@@ -126,7 +112,7 @@ class OutlinedTextFields extends React.Component {
                         name="image_url"
                             onChange={this.handleChange}
                             className={classes.textField}
-                            label="Img"
+                            label="Profile Picture"
                             variant="outlined"
                             margin="normal"
                             id="outlined-name"
@@ -165,16 +151,6 @@ class OutlinedTextFields extends React.Component {
                         </ButtonStyles>
                     </form>
                 </FormStyles>
-                <Checkout>
-                    <div className="guestCheck">
-                        <div className="or">
-                            <h3>OR</h3>
-                        </div>
-                        <ButtonStyles>
-                            <button type="submit">Checkout as Guest</button>
-                        </ButtonStyles>
-                    </div>
-                </Checkout>
             </Profile>
 
 
