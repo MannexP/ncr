@@ -25,3 +25,11 @@ urlpatterns = [
     path('token-auth/', obtain_jwt_token),
     url(r'^$', views.FrontendAppView.as_view())
 ]
+
+REACT_ROUTES = ['build-a-solution', 'checkout', 'products', 'create-profile', 'profile', 'thank-you', 'login', 'signup', 'solution-products']
+
+for route in REACT_ROUTES:
+
+    urlpatterns += [
+        path(f'{route}', views.FrontendAppView.as_view())
+    ]
